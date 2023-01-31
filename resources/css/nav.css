@@ -1,0 +1,19 @@
+nav {
+    width: 160px; height: 100vh; background-color: var(--font-color); padding: 22.05px 20px;
+    box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.04);
+}
+nav ul {
+    padding: 0; color: var(--color-grey-40); font-size: 14px; font-weight: var(--font-reg-weight);
+}
+nav ul li {
+    height: 40px;
+}
+nav .nav-setting {
+    display: flex; position :absolute; bottom: 0px;
+}
+nav .nav-setting img {
+    padding-right: 5px; 
+}
+nav ul ol {
+    display: none;
+}

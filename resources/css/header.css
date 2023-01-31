@@ -1,0 +1,42 @@
+
+header {
+    height: 80px; background-color: var(--font-color); color: var(--color-search); border-radius: 10px;  display: flex; text-align: center; align-items: center; justify-content: space-between;
+}
+header .header-search {
+    width:400px;
+   background-color: white; height: 44px;   font-size: 0; 
+   border-radius: 10px; vertical-align: middle; display: inline-block; margin-left: 20px;
+}
+header .header-search input[type=text] {
+    border: none; height: 40px; margin-left: 15px; width: 80%; display: inline-block;  
+}
+header .header-search input[type=text]:focus {
+   outline: none;
+}
+header .header-search img {
+     margin: 10px 20px 0 0; float: right; 
+}
+header .header-middle {
+    flex-grow: 2;
+}
+header .header-options {
+    width:500px; border: 1px solid red; height: 44px; flex-direction: column-reverse;
+}
+header .header-options > img {
+    padding: 0 10px; margin-bottom: 7px;
+}
+
+header .header-options > img:last-child {
+    margin-bottom: 7px;
+}
+header .header-options > .division {
+     padding : 0 10px;
+     display: inline-block; color: var(--color-border);position: relative; top: -15px;
+}
+header .header-options >.profile-img {
+    margin-top: 5px;
+    border-radius: 50%; width: 42px; height: 42px; background-color: white; display:inline-block;
+}
+header .header-options > .profile-img img {
+    border-radius: 50%; width: 40px; height: 40px;
+}

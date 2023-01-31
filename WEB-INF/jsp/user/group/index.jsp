@@ -57,13 +57,6 @@
                 </div>
                 <div class="tree-list-bottom" id="jstree">
                     <ul class="menu-list">
-                        <li>Root node 1
-                            <ul>
-                            <li id="child_node_1">Child node 1</li>
-                            <li>Child node 2</li>
-                            </ul>
-                        </li>
-                        <li>Root node 2</li>
                     </ul>
                 </div>
                 <div class="group-user" id="COM1477">
@@ -94,45 +87,43 @@
      <script>
         $(document).ready(function(){
             $.getJSON("../../../../resources/db/group.json",function(data){
-                //할 일 처리
-                let menu_list="";
+                // json 객체 담기
+                let menu_list=[];
+                let menu_list_info=[];
                 let select_list="";
+
                 $.each(data,function(key,value){
                     if(value.UP_COM_SYS_SN==="1" && value.CTG==="C") {
-                        // menu_list+=value.Header
-                        menu_list+="<li id="+value.id+">"+value.Header+"</li>"
+                        menu_list[key]=value.Header+"<img src=\"../../../../resources/svgs/Icon_arrowdownx16 (1).svg\">";
                         select_list+="<option id="+value.id+">"+value.Header+"</option>";
                     }
+                    menu_list_info[key]=({'name' : value.Header,'nodekey':value.ID, 'parent':value.COM_SYS_SN, 'isPerson':value.CTG});
                 });
-                $("#jstree").append(menu_list);
+                $('#jstree').jstree({
+                'core' : {
+                    check_callback: true,
+                        data : menu_list,
+                        themes: {icons:false, dots:false}
+                },
+                'checkbox' : {
+                    "keep_selected_style" : false
+                },
+                'plugins' : ["dnd","types","search"],
+		        'contextmenu' : {
+		}
+            });
+                // $("#jstree").append(menu_list);
                 $("#select-options").append(select_list);
             });
         });
         $(function () { 
-            $('#jstree').jstree(); 
-        //     $('#jstree').jstree({
-        //         'core' : {
-        //             'data': menu_list,
-        //         },
-        //         'plugins' : ["wholerow","contextmenu","cookies"],
-		// 'contextmenu' : {
-		// 	"items" : {
-		// 		" menu_list" : { //사실상 "test"라는 이름은 변수에 가깝기 때문에 뭐든 상관없다 생각한다.
-	    //     		"separator_before" : false,
-		// 			"separator_after" : true,
-		// 			"label" : "신규메뉴",
-		// 			"action" : function(obj){alert('메뉴테스트')}
-		// 		}
-		// 	}
-		// }
-        //     });
+            // $('#jstree').jstree(); 
             $('#jstree').on("changed.jstree", function (e, data) {
             });
-            
             $('button').on('click', function () {
-            $('#jstree').jstree(true).select_node('child_node_1');
-            $('#jstree').jstree('select_node', 'child_node_1');
-            $.jstree.reference('#jstree').select_node('child_node_1');
+            // $('#jstree').jstree(true).select_node('child_node_1');
+            // $('#jstree').jstree('select_node', 'child_node_1');
+            // $.jstree.reference('#jstree').select_node('child_node_1');
             });
         });
     </script>

@@ -3,11 +3,11 @@
 <title></title>
 <link href="../../../resources/css/common.css" rel="stylesheet" type="text/css">
 <link href="../../../resources/css/nav.css" rel="stylesheet" type="text/css">
-<script src="../../../resources/js/user/board/index.js"></script>
+
 </head>
 <body>
     <nav class="nav-menu">
-        <img src="../../../resources/svgs/Logo.svg" alt="logo"/>
+        <img src="../../../resources/svgs/Logo.svg" alt="logo" class="logo"/>
         <ul class="nav-list">
             <li>E-메일</li>
             <li>업무메일</li>
@@ -15,7 +15,7 @@
             <li>일정</li>
             <li>명함</li>
             <li>게시판</li>
-                <ol class="nav-list-2nd" onclick="hide.style.display">
+                <ol class="nav-list-2nd hide">
                     <li>그룹게시판</li>
                     <li>조직문화개선</li>
                     <li>안전보건</li>
@@ -41,4 +41,8 @@
         </div>
     </nav>
 </body>
+
+<script src="../../../resources/js/user/board/index.js"></script>
+<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+
 </html>

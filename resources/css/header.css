@@ -1,6 +1,7 @@
 
 header {
-    height: 80px; background-color: var(--font-color); color: var(--color-search); border-radius: 10px;  display: flex; text-align: center; align-items: center; justify-content: space-between;
+    margin: 20px;
+    height: 80px; background-color: var(--font-color); color: var(--color-search); border-radius: 10px;  display: flex !important; text-align: center; align-items: center; justify-content: space-between;
 }
 header .header-search {
     width:400px;
@@ -20,7 +21,7 @@ header .header-middle {
     flex-grow: 2;
 }
 header .header-options {
-    width:500px; border: 1px solid red; height: 44px; flex-direction: column-reverse;
+    width:500px; height: 44px; flex-direction: column-reverse;
 }
 header .header-options > img {
     padding: 0 10px; margin-bottom: 7px;
@@ -34,9 +35,10 @@ header .header-options > .division {
      display: inline-block; color: var(--color-border);position: relative; top: -15px;
 }
 header .header-options >.profile-img {
-    margin-top: 5px;
+    padding-top: 5px; 
     border-radius: 50%; width: 42px; height: 42px; background-color: white; display:inline-block;
 }
 header .header-options > .profile-img img {
-    border-radius: 50%; width: 40px; height: 40px;
+    border-radius: 50%; width: 40px; height: 40px; bottom: 4px;
+    position: relative;
 }

@@ -1,19 +1,35 @@
 nav {
-    width: 160px; height: 100vh; background-color: var(--font-color); padding: 22.05px 20px;
+    width: 200px; height: 100vh; background-color: var(--font-color);
     box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.04);
+}
+.logo {
+    padding-bottom: 30px;
+}
+nav > *,
+nav ul > li {
+    padding: 22.05px 20px
 }
 nav ul {
     padding: 0; color: var(--color-grey-40); font-size: 14px; font-weight: var(--font-reg-weight);
 }
 nav ul li {
-    height: 40px;
+    height: 40px; justify-content: space-between; display: flex;     align-items: center; 
+}
+nav ul li .hide {
+    display: none;
+}
+nav ul li img {
+    width: 20px;
 }
 nav .nav-setting {
-    display: flex; position :absolute; bottom: 0px;
+    display: flex; position :absolute; bottom: 0px; color: white;
 }
 nav .nav-setting img {
     padding-right: 5px; 
 }
+nav .nav-setting > * {
+    margin-bottom: 10px !important;
+}
 nav ul ol {
-    display: none;
+    font-weight: var(--font-reg-weight); font-size: 15px; color: var(--color-grey-40); padding-left: 10px;
 }

@@ -70,27 +70,46 @@
     
 }
 body {
+    display: flex; font-family: var(--font-kr) !important;
     margin: 0; padding: 0; box-sizing: border-box;  background-color: var(--color-bg);
 }
-h1{
+.main-wrapper {
+    width: calc(100% - 160px);  float: right;
+}
+.ph1{
     font-family: var(--font-kr); font-weight: var(--font-bold-weight); font-size: 32px; line-height: 40px;
 }
-h2{
+.ph2{
     font-family: var(--font-kr); font-weight: var(--font-bold-weight); font-size: 28px; line-height: 36px;
 }
-h3 {
+.ph3 {
     font-family: var(--font-kr); font-weight: var(--font-bold-weight); font-size: 24px; line-height: 35px;
 }
-h4 {
+.ph4 {
     font-family: var(--font-kr); font-weight: var(--font-bold-weight); font-size: 22px; line-height: 32px;
 }
-h5 {
+.ph5 {
     font-family: var(--font-kr); font-weight: var(--font-mid-weight); font-size: 22px; line-height: 30px;
 }
-
-ul, li {
-    list-style: none;
+input,
+select {
+    border: none;
 }
+input:focus,
+select:focus {
+    outline: none;
+}
+ul, li {
+    list-style: none; padding: 0%;
+}
+.main-wrapper {
+    background-color: var(--color-bg);
+}
+main {
+    display: flex;
+    box-sizing: border-box; margin: 0 20px; height: calc(100vh - 120px);
+}
+
 select{
     width: 150px; height: 30px;
     appearance: none;
@@ -106,9 +125,13 @@ select:invalid{
 /* buttons */
 /* 임의 클래스명, html에 따라 변경 필요 */
 .btn-blue {
-    width: 68px; height: 40px; color: white;
-    background-color: var(--color-blue-100); border-radius: var(--btn-border);
-}
+    width: 84px; height: 40px; color: white; font-size: 14px; font-weight: var(--font-reg-weight);
+    background-color: var(--color-blue-100); border-radius: var(--btn-border); 
+    border: 1px solid #394DC0;
+}      
+.btn-blue:nth-child(2) {
+    margin-left: 5px;
+}               
 .btn-blue:hover {
     background-color: var(--color-blue-80)
 }
@@ -173,4 +196,9 @@ select:invalid{
 }
 .btn-nonborder:disabled {
     background-color: white; color: var(--color-grey-40);
+}
+
+/* main 상단 버튼 */
+.right-btn {
+    margin-bottom: auto; margin-top: auto;
 }

@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'Noto Sans';
     letter-spacing: -0.05em;
-    src: url('../fonts/Noto-Sans/NotoSans-Black.ttf')format('trueType');
+    src: url('../fonts/Noto_Sans/NotoSans-Black.ttf')format('trueType');
 }
 @font-face {
     font-family: 'Noto Sans KR';
-    src: url('../fonts/Noto-Sans-KR/NotoSansKR-Regular.otf');
+    src: url('../fonts/Noto_Sans_KR/NotoSansKR-Regular.otf');
 }
 :root {
     --font-kr : 'Noto Sans KR';
@@ -70,14 +70,14 @@
     
 }
 body {
-    display: flex; font-family: var(--font-kr) !important;
+    display: flex; font-family: var(--font-kr) !important; 
     margin: 0; padding: 0; box-sizing: border-box;  background-color: var(--color-bg);
 }
 .main-wrapper {
     width: calc(100% - 160px);  float: right;
 }
 .ph1{
-    font-family: var(--font-kr); font-weight: var(--font-bold-weight); font-size: 32px; line-height: 40px;
+    font-family: var(--font-kr); font-weight: var(--font-bold-weight); font-size: 32px; line-height: 40px; letter-spacing: -0.05em; font-style: normal;
 }
 .ph2{
     font-family: var(--font-kr); font-weight: var(--font-bold-weight); font-size: 28px; line-height: 36px;

@@ -39,8 +39,11 @@
     margin-right: 5px; width: 17px;
 }
 /* tree 라이브러리 커스텀 */
-.jstree-default .jstree-icon {
-    background-image: url('../../resources/svgs/Icon_arrowdownx16\ \(1\).svg') !important;
+ .jstree-default .jstree-icon {
+    /* background-image: url('../../resources/svgs/Icon_arrowdownx16\ \(1\).svg') !important; */
+}
+.jstree-open li[aria-expanded='true'] > i {
+    /* background-image: url('../../resources/svgs/home2.svg') !important; */
 }
 .jstree-default .jstree-node, .jstree-default .jstree-icon {
     /* background-image: none !important; */
@@ -51,43 +54,108 @@
 .jstree-default .jstree-closed>.jstree-ocl {
     background-position: 4px 3px !important;
 }
+
 .tree-list-bottom > ul > li[aria-level="1"]> a{
     font-weight: var(--font-mid-weight); font-family: var(--font-kr);
     font-size: 14px;
     line-height: 26px;
     position: relative;
     left: -40px; color: var(--color-grey-100);line-height: 26px;
-    letter-spacing: -0.05em;
+    letter-spacing: -0.05em; 
+}
+.jstree-children > li {
+    padding: 2px 0px;
 }
 .jstree .jstree-open >.jstree-children {
     position: relative;
-    left: -23px;
+    left: 3px; top: 12px; font-weight: var(--font-mid-weidht);
 }
-.jstree .jstree-open >.jstree-children > ul {
-    left: -109px;
+.jstree .jstree-open >.jstree-children > li { 
+     margin: 0;     padding-top: 4px; 
+   
+}
+.jstree .jstree-open >.jstree-children > li[aria-level="2"] > a {
+    position: relative; left: -33px; font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500; transform:rotate(-0.03deg);
+    font-size: 14px;
+}
+.jstree .jstree-open >.jstree-children > li[aria-level="2"] > i{
+    position: relative;
+    left: 199px;
+}
+.jstree .jstree-open >.jstree-children > li[aria-level="2"],[aria-expanded="true"]{
+    /* position: relative; left: -89px; */ 
+    display: block; 
+}
+
+.jstree .jstree-open >.jstree-children > li[aria-level="2"] > ul{
+    /* display: flex; */
+    left: -20px;
+    top: 0px;
+    /* flex-direction: row-reverse; */
+    position: relative;
+    
+}
+.jstree-default .jstree-clicked {
+    background: transparent !important; border: none !important; box-shadow: none !important;
+}
+.jstree .jstree-open >.jstree-children > li[aria-level="3"] {
+    display: block;
+}
+.jstree .jstree-open >.jstree-children > li[aria-level="3"] > i {
+    position: relative; right: -198px;
+}
+.jstree .jstree-open >.jstree-children > li[aria-level="3"] > a {
+    font-weight: var(--font-mid-weidht); font-size: 13px; transform:rotate(-0.03deg);
+}
+.jstree .jstree-open >.jstree-children > li[aria-level="3"] > a i{
+    position: relative;
+    left: 173px;
+}
+.jstree .jstree-open >.jstree-children > li[aria-level="3"] > ul{
+    position: relative;
+    left: 33px;
+    font-weight: var(--font-mid-weidht);
+    font-size: 12px;
+    line-height: 17px; 
+    letter-spacing: -0.05em;
+}
+
+.jstree .jstree-open >.jstree-children > li[aria-level="3"] > ul > i {
+    position: relative;
+    left: -41px;
 }
 .jstree-default>.jstree-container-ul >.jstree-node {
-    min-height: 35px !important;  align-items: center;
+    min-height: 35px !important;  align-items: center; 
 }
-.jstree-default>.jstree-container-ul >.jstree-node[aria-expanded="false"] {
+.jstree-default>.jstree-container-ul >.jstree-node {
     display: flex;
-    justify-content: space-between !important;
+    justify-content: space-between !important;  left: 13px; position: relative;
     flex-direction: row-reverse !important;    height: fit-content;
 }   
 .jstree-default>.jstree-container-ul >.jstree-node[aria-expanded="true"]{
-    display: block;
+    display: block;     border-bottom: 2px solid #E3E3E3;
+    left: -10px;     padding-bottom: 33px;
+}
+.jstree-default>.jstree-container-ul >.jstree-node[aria-expanded="true"]:not(:first-child) {
+    padding-top: 10px;
 }
 .jstree-default>.jstree-container-ul > .jstree-open[aria-expanded="true"] > a{
-    font-family: 'Noto Sans KR';
-font-style: normal;
-font-weight: 700;
-font-size: 14px;
-line-height: 26px; left: -72px;
+    font-weight: var(--font-bold-weight); font-size: 14px; left: -53x; top: 6px; transform:rotate(-0.03deg);
 }
+
 /* 사원 정보 부분 */
 .group-wrapper .group-user {
-    width: calc(100% - 270px); padding-left:30px;
+    width: calc(100% - 270px); padding-left:30px; overflow: scroll;
 }
+.group-wrapper .group-user::-webkit-scrollbar {
+    width: 10px;
+    background-color: transparent;
+  }
+  .group-wrapper .group-user::-webkit-scrollbar-thumb {
+    background-color: white; background-clip: padding-box;  border: 2px solid transparent;
+  } 
 .group-wrapper .group-user .userlist-top {
     display: flex; justify-content: space-between;
 }
@@ -108,15 +176,23 @@ line-height: 26px; left: -72px;
     margin-right: 10px;
 }
 .group-wrapper .group-user .userlist-bottom .user-card {
+    /* min-height: 216px;  height: fit-content; */box-sizing: border-box;
+    min-height: 216px; height: 216px; max-height: 216px; 
     display: table; padding: 20px; margin: 0 20px 20px 0;
-    width: 325px; min-height: 216px;  height: fit-content; background: #FFFFFF; border-radius: 10px;
+    width: 325px;  background: #FFFFFF; border-radius: 10px;
 }
 .group-wrapper .group-user .userlist-bottom .user-card .card-top{
-    display: flex; justify-content: space-between;
+    display: flex; justify-content: space-between; height: 75px;
 }
 .group-wrapper .group-user .userlist-bottom > ul{
     display: flex;
     flex-wrap: wrap;
+}
+.group-wrapper .group-user .userlist-bottom .user-card p {
+    margin: 0;
+}
+.group-wrapper .group-user .userlist-bottom .user-card .card-top p {
+    margin-bottom: 5px;
 }
 .group-wrapper .group-user .userlist-bottom .user-card .card-top .user-info p:first-child{
     font-weight:var(--font-mid-weidht); font-size: 12px; line-height: 18px; text-align: center;
@@ -142,11 +218,10 @@ line-height: 26px; left: -72px;
      color: #555555; 
 }
 .group-wrapper .group-user .userlist-bottom .user-card .card-middle {
-    margin: 21px 0 25px 0;
+    padding-top: 10px; height: 83px;
 }
 .group-wrapper .group-user .userlist-bottom .user-card .card-bottom {
-    display: flex;    
-
+    display: flex; 
 }
 .group-wrapper .group-user .userlist-bottom .user-card .card-bottom p {
     margin-bottom: auto; margin-top: auto; font-weight: 400;
@@ -155,4 +230,18 @@ line-height: 26px; left: -72px;
 }
 .group-wrapper .group-user .userlist-bottom .user-card .card-bottom p img {
     margin-right: 3px;
+}
+/* select box */
+.select-options  {
+    width: 80px; height: 19px; font-family: 'Noto Sans KR'; font-style: normal;
+font-weight: var(--font-mid-weight);
+font-size: 13px;
+line-height: 19px; letter-spacing: -0.05em; background-color: #1D203A;
+
+/* Gray80 */
+
+color: #777777;
+}
+.select-options option {
+    background-color: #1D203A;
 }

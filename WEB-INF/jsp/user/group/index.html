@@ -298,14 +298,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
     <!-- jsTree -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/jstree.min.js"></script>
-     <script>
+     <script >
         $(document).ready(function(){
+         
             $.getJSON("../../../../resources/db/group.json",function(data){
                 // json 객체 담기
                 let menu_list=[];
                 let menu_list_info=[];
                 let select_list="";
                 // db 연결하면 데이터 저장할 배열, 현재는 dummy data
+                // json 파일 그대로 사용할 수 있도록 
                 let json = [
                         {"text": '로지스올(주)', "id": 'COM628', "parent": '#'},
                         {"text": '로지스올시스템즈', "id": 'COM254', "parent": '#'},
@@ -460,19 +462,39 @@
                     "keep_selected_style" : false
                 },
                 'plugins' : ["dnd","types","search"],
-		        'type' : {
-                    'jstree-open' : {
-                        'icon' : '../../../../resources/svgs/Icon_arrowdownx16 (1).svg'
+		        'types' : {
+                    'default' : {
+                        'icon' : 'fa-solid fa-angle-down'
                     },
-                    'jstree-closed' : {
-                        'icon' : '../../../../resources/svgs/Icon_arrowdownx16.svg.svg'
+                    'f-open' : {
+                        'icon' : 'fa-solid fa-angle-up'
+                    },
+                    'f-close' : {
+                        'icon' : 'fa-solid fa-angle-down'
                     }
+                },
+                'group' : {
+                    'jstree-leaf' : false
+
                 }
-            });
-                // $("#jstree").append(menu_list);
+            })
+            .bind("open_node.jstree", function(event, date) {
+                let parentId = event.target;
+                let temp = document.createElement('i');
+                parentId.appendChild(temp)
+                temp.setAttribute('src','../../../../resources/svgs/Icon_arrowdown16.svg')
+                console.log(event,'[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]')
+            })
+                $("#jstree").append(menu_list);
                 $("#select-options").append(select_list);
             });
+            // document.onclick(function(event) {
+            //     console.log(event,'============================')
+            // })
         });
+
+
+
         $(function () { 
             // $('#jstree').jstree(); 
             $('#jstree').on("changed.jstree", function (e, data) {
@@ -498,6 +520,7 @@
                 //     $('.nav-list-2nd').addClass('hide');
                 // }
             })
+            
         })
     </script>
    

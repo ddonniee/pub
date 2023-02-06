@@ -21,7 +21,7 @@
     display: flex; justify-content: space-between;
 }
 .group-wrapper .tree-list {
-    width: 270px; height: 100%; background-color: white; overflow-y: scroll; border-radius: 10px; padding: 15px 20px;
+    width: 270px; height: 100%; background-color: white; overflow-y: scroll; border-radius: 10px; padding: 15px 0;
 }
 .group-wrapper .tree-list::-webkit-scrollbar {
      width: 3px; color: var(--color-grey-20);
@@ -30,6 +30,10 @@
     width: 230px; height: 40px;  border: 1px solid #E3E3E3; border-radius: 10px;
     display: flex; justify-content: space-between; align-items: center; padding-left: 10px;
     margin-bottom: 15px;
+}
+.group-wrapper .tree-list-top,
+.group-wrapper .tree-list-bottom {
+    width: 85%; margin-left: auto; margin-right: auto;
 }
 .group-wrapper .tree-list-top > div input,
 .group-wrapper .tree-list-top > div select {
@@ -60,7 +64,8 @@
     font-size: 14px;
     line-height: 26px;
     position: relative;
-    left: -40px; color: var(--color-grey-100);line-height: 26px;
+    /* left: -40px; */
+     color: var(--color-grey-100);line-height: 26px;
     letter-spacing: -0.05em; 
 }
 .jstree-children > li {
@@ -68,11 +73,18 @@
 }
 .jstree .jstree-open >.jstree-children {
     position: relative;
-    left: 3px; top: 12px; font-weight: var(--font-mid-weidht);
+    left: 43px; top: 12px; font-weight: var(--font-mid-weidht);
 }
 .jstree .jstree-open >.jstree-children > li { 
-     margin: 0;     padding-top: 4px; 
-   
+     margin: 0;     padding-top: 4px;   
+}
+.jstree-open > ul  {
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--color-grey-20);
+}
+.jstree-1 > ul {
+    position: relative;
+    left: -36px;
 }
 .jstree .jstree-open >.jstree-children > li[aria-level="2"] > a {
     position: relative; left: -33px; font-family: 'Noto Sans KR';
@@ -115,11 +127,11 @@
 }
 .jstree .jstree-open >.jstree-children > li[aria-level="3"] > ul{
     position: relative;
-    left: 33px;
+    left: 33px; top: 2px;
     font-weight: var(--font-mid-weidht);
     font-size: 12px;
     line-height: 17px; 
-    letter-spacing: -0.05em;
+    letter-spacing: -0.05em; color: #777777;
 }
 
 .jstree .jstree-open >.jstree-children > li[aria-level="3"] > ul > i {
@@ -135,8 +147,7 @@
     flex-direction: row-reverse !important;    height: fit-content;
 }   
 .jstree-default>.jstree-container-ul >.jstree-node[aria-expanded="true"]{
-    display: block;     border-bottom: 2px solid #E3E3E3;
-    left: -10px;     padding-bottom: 33px;
+    display: block;    left: -10px;     padding-bottom: 33px;
 }
 .jstree-default>.jstree-container-ul >.jstree-node[aria-expanded="true"]:not(:first-child) {
     padding-top: 10px;

@@ -3,9 +3,8 @@
             var id = data.instance.get_node(data.selected).id; // COM_SYS_SN
             var parent = data.instance.get_node(data.selected).parent; // UP_COM_SYS_SN
             var nodekey = 'COM'+id; // node id 
-            console.log('id =',id)
-            console.log('parent =',parent)
-            console.log('nodekey =',nodekey)
+
+            console.log('node id =',nodekey)
         }
         // select box 선택시 노드 정보를 받아와서 이벤트 처리하는 부분
         function get_selected_opts(event) {

@@ -15,6 +15,8 @@
 
 </head>
 <body>
+
+    <!-- 공통 nav start -->
     <nav class="nav-menu">
         <img src="../../../../resources/svgs/Logo.svg" alt="logo" class="logo"/>
         <ul class="nav-list">
@@ -49,7 +51,10 @@
             <p>위젯설정</p>
         </div>
     </nav>
+    <!-- 공통 nav end -->
+
     <div class="main-wrapper">
+        <!-- 공통 header start -->
         <header>
             <div class="header-search">
                 <input type=text placeholder="검색어를 입력해주세요" />
@@ -69,20 +74,23 @@
                 <img src="../../../../resources/svgs/Icon_arrowdown.svg" alt="more-menu"/>
             </div>
         </header>
+        <!-- 공통 header end -->
 
-        <!-- 컨텐츠 영역 -->
+        <!-- content start -->
         <main>
             <div class="group-wrapper">
+
+                <!-- 조직도 경로 start -->
                 <section class="routes">
                     <img src="../../../../resources/svgs/home2.svg">
-                    
-                    <!-- 조직도 경로 표시 -->
                     <ul>
                         <li>Breadcrumbs link</li>
                         <li><img src="../../../../resources/svgs/arrowright2.svg"/> Breadcrumbs link2</li>
                         <li><img src="../../../../resources/svgs/arrowright2.svg"/>Breadcrumbs link3</li>
                     </ul>
                 </section>
+                <!-- 조직도 경로 end -->
+
                 <section class="group-title">
                     <h1 class="title ph1">조직도</h1>
                     <div class="right-btn">
@@ -92,38 +100,47 @@
                 </section>
                 <section class="group-content">
                 
-                <!-- 계열사 데이터 바인딩 부분 -->
+                <!-- 조직도 start -->
                 <div class="tree-list">
                     <div class="tree-list-top">
-                        <div class="select-aff">
-                            <ul id="select-options">계열사 선택
-                                <!-- <option value="" disabled selected>계열사 선택</option> -->
+
+                        <div class="select-box">
+                           <!-- select box -->
+                           <input type="hidden" name="option-value" value="" id="select-input">
+                            <button class="select-label" type="button">계열사 선택</button>
+                            <ul class="option" id="select-options">
+                                 <!-- 바인딩된 data로 jstree 생성하는 부분, /resouces/js/group/index.js에서 처리 -->
                             </ul>
-                            <img src="../../../../resources/svgs/Icon_arrowdown2.svg" />
                         </div>
                         <div class="search">
                             <input type=text placeholder="부서 검색"/>
-                            <img src="../../../../resources/svgs/Icon_search.svg" alt="search"/>
+                            <button class="btn-search"><img src="../../../../resources/svgs/Icon_search.svg" alt="search" /></button>
                         </div>
                     </div>
                     <div class="vertical-line"></div>
                     
-                    <!-- db/json data로 jstree 생성하는 부분 -->
+                    <!-- 바인딩된 data로 jstree 생성하는 부분, /resouces/js/group/index.js에서 처리 -->
                     <div class="tree-list-bottom" id="jstree">
-                        <ul class="menu-list">
-                        </ul>
+                        <ul class="menu-list"></ul>
                     </div>
                 </div>
-
+                <!-- 조직도 end -->
+                
                 <div class="group-user">
                     <div class="userlist-top">
-                        <h4 class="ph4">사원정보 <p>13</p>명</h4> 
-                        <div class="search"><input type=text placeholder="담당자를 검색해주세요"/><img src="../../../../resources/svgs/Icon_search.svg" alt="search"/></div>
+                        <h4 class="ph4">사원정보 13명</h4> 
+                        <div class="search">
+                            <input type="text" placeholder="담당자를 검색해주세요" name="manager" />
+                            <button class="btn-search">
+                                <img src="../../../../resources/svgs/Icon_search.svg" alt="search" />
+                            </button>
+                        </div>
                     </div>
-                    <!-- 사원 정보 리스트 영역 -->
+                    <!-- 사원 목록 start-->
                     <!-- 개별 사원 카드는 가로 기준으로 먼저 삽입되며, width값 초과시 하단으로 밀림 -->
                     <div class="userlist-bottom">
                         <ul class="users">
+
                             <!-- 개별 사원 정보 start -->
                             <li class="user-card" name="USR2135">
                                 <div class="card-top">
@@ -292,16 +309,19 @@
                                 </div>
                             </li>
                         </ul>
+                        <!-- 사원 목록 end -->
                     </div>
                     </div>
                 </section>
             </div>
         </main>
+        <!-- content end -->
     </div>
     <!-- jQuery -->
     <script src="../../../../resources/lib/jquery-migrate-1.4.1.min.js"></script>
     <!-- jsTree -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/jstree.min.js"></script>
-     <script src="../../../../resources/js/user/group/index.js"></script>
+    <!-- data load / functions -->
+    <script src="../../../../resources/js/user/group/index.js"></script>
 </body>
 </html>

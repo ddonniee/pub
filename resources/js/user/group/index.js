@@ -7,6 +7,41 @@
             console.log('parent =',parent)
             console.log('nodekey =',nodekey)
         }
+        // select box 선택시 노드 정보를 받아와서 이벤트 처리하는 부분
+        function get_selected_opts(event) {
+            var id = event.target.id;
+            var parent = event.target.title;
+
+            console.log('id = ',id)
+            console.log('부서명 = ',parent)
+        }
+
+        $(document).ready(function () {
+            // 셀렉트 박스 클릭
+            $('.select-label').click(function () {
+                $('.select-box').toggleClass('selected');
+                $('.option').toggle();
+            });
+
+            // 셀렉트 옵션 선택
+            $('.option-item').click(function () {
+                $('.select-box').removeClass('selected');
+                $('.option').toggle();
+                $('.select-label').text(this.id);  // 라벨에 선택값 넣기
+                $('#select-input').val(this.id);  // input에 선택값 넣기
+            });
+
+            // 부서추가 버튼 클릭 이벤트
+            $('#btn-add-dept').click(function() {
+                alert('부서추가 팝업 작업 예정');
+            });
+
+            // 사원등록 버튼 클릭 이벤트
+            $('#btn-add-emp').click(function() {
+                alert('사원등록 팝업 작업 예정');
+            });
+        });
+
         $(document).ready(function(){
          
             let jsoninfo=[]; // json data중 jstree에 필요한 정보만 담을 배열
@@ -40,10 +75,10 @@
                             jsoninfo.push(tmp2)
                         }
                     })
-                    const tmp1 = {"text": item.Header, "id": item.COM_SYS_SN , "parent": "#"}; 
+                    const tmp1 = {text: item.Header, id: item.COM_SYS_SN , parent: "#"}; 
                     if(!item.ID.includes('USR')) {
                         jsoninfo.push(tmp1)
-                        // menu_list+="<li id="+item.id+">"+item.Header+"</li>";
+                        menu_list+="<li class=\"option-item\" id=\""+item.COM_SYS_SN+"\" title=\""+item.Header+"\" onclick=\"get_selected_opts(event)\">"+item.Header+"</li>";
                     }
                 });
                 // 부서 정보만 모은 배열을 객체화하여 jstree로 조직도 생성
@@ -57,7 +92,8 @@
                 'checkbox' : {
                     "keep_selected_style" : false
                 },
-                'plugins' : ["dnd","types","search","json_data"],
+                // dnd = drag and drop, search = 검색 옵션
+                'plugins' : ["dnd","search"],
                 'group' : {
                     'jstree-leaf' : false
 
@@ -67,7 +103,14 @@
                     "show_only_matches_children":true,
                 }
             })
-                $("#select-options").append(menu_list); 
+            .bind("open_node.jstree", function(event, date) {
+                let parentId = event.target;
+                let temp = document.createElement('i');
+                parentId.appendChild(temp)
+                temp.setAttribute('src','../../../../resources/svgs/Icon_arrowdown16.svg')
+            })
+            $("#jstree").append(menu_list);
+            $("#select-options").append(menu_list);
             });
            
         });

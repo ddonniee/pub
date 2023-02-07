@@ -6,10 +6,8 @@
     <link href="../../../../resources/css/nav.css" rel="stylesheet" type="text/css">
     <link href="../../../../resources/css/common.css" rel="stylesheet" type="text/css">
     <link href="../../../../resources/css/group.css" rel="stylesheet" type="text/css">
-
     <link rel="stylesheet" href="<%=ROOT%>/resources/css/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/themes/default/style.min.css" />
-
     <script src="/logiworks/resources/js/user/login/index.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -71,11 +69,14 @@
                 <img src="../../../../resources/svgs/Icon_arrowdown.svg" alt="more-menu"/>
             </div>
         </header>
-    
+
+        <!-- 컨텐츠 영역 -->
         <main>
             <div class="group-wrapper">
                 <section class="routes">
                     <img src="../../../../resources/svgs/home2.svg">
+                    
+                    <!-- 조직도 경로 표시 -->
                     <ul>
                         <li>Breadcrumbs link</li>
                         <li><img src="../../../../resources/svgs/arrowright2.svg"/> Breadcrumbs link2</li>
@@ -90,8 +91,8 @@
                     </div>
                 </section>
                 <section class="group-content">
-                    
-                    <!-- json data 처리 부분 -->
+                
+                <!-- 계열사 데이터 바인딩 부분 -->
                 <div class="tree-list">
                     <div class="tree-list-top">
                         <div class="select-aff">
@@ -106,493 +107,201 @@
                         </div>
                     </div>
                     <div class="vertical-line"></div>
+                    
+                    <!-- db/json data로 jstree 생성하는 부분 -->
                     <div class="tree-list-bottom" id="jstree">
                         <ul class="menu-list">
                         </ul>
                     </div>
                 </div>
 
-                    <div class="group-user" id="COM1477">
-                        <div class="userlist-top">
-                            <h4 class="ph4">사원정보 <p>13</p>명</h4> 
-                            <div class="search"><input type=text placeholder="담당자를 검색해주세요"/><img src="../../../../resources/svgs/Icon_search.svg" alt="search"/></div>
-                        </div>
-                        <div class="userlist-bottom">
-                            <ul>
-                                <li class="user-card" name="USR2135">
-                                    <div class="card-top">
-                                        <div class="user-info">
-                                            <p>내근</p>
-                                            <p>고은영</p>
-                                            <p><span>운영혁신담당</span> | <span>POOLINGBiz혁신팀</span></p>
-                                        </div>
-                                        <div class="user-profile">
-                                            <img src="../../../../resources/svgs/profile.jfif"/>
-                                        </div>
+                <div class="group-user">
+                    <div class="userlist-top">
+                        <h4 class="ph4">사원정보 <p>13</p>명</h4> 
+                        <div class="search"><input type=text placeholder="담당자를 검색해주세요"/><img src="../../../../resources/svgs/Icon_search.svg" alt="search"/></div>
+                    </div>
+                    <!-- 사원 정보 리스트 영역 -->
+                    <!-- 개별 사원 카드는 가로 기준으로 먼저 삽입되며, width값 초과시 하단으로 밀림 -->
+                    <div class="userlist-bottom">
+                        <ul class="users">
+                            <!-- 개별 사원 정보 start -->
+                            <li class="user-card" name="USR2135">
+                                <div class="card-top">
+                                    <div class="user-info">
+                                        <p>내근</p>
+                                        <p>고은영</p>
+                                        <p><span>운영혁신담당</span> | <span>POOLINGBiz혁신팀</span></p>
                                     </div>
-                                    <div class="card-middle">
-                                        <p><span>근무위치  </span><span>본사7층</span></p>
-                                        <p><span>담당업무  </span><span>유로지스넷 서비스(웹,모바일) UI/GUI 디자인</span></p>
+                                    <div class="user-profile">
+                                        <img src="../../../../resources/svgs/profile.jfif"/>
                                     </div>
-                                    <div class="card-bottom">
-                                        <p><img src="../../../../resources/svgs/sms.svg"/><span>메일쓰기</span></p>
-                                        <p><img src="../../../../resources/svgs/messagecircle.svg"/><span>쪽지쓰기</span></p>
-                                    </div>
-                                </li>
+                                </div>
+                                <div class="card-middle">
+                                    <p><span>근무위치  </span><span>본사7층</span></p>
+                                    <p><span>담당업무  </span><span>유로지스넷 서비스(웹,모바일) UI/GUI 디자인</span></p>
+                                </div>
+                                <div class="card-bottom">
+                                    <p><img src="../../../../resources/svgs/sms.svg"/><span>메일쓰기</span></p>
+                                    <p><img src="../../../../resources/svgs/messagecircle.svg"/><span>쪽지쓰기</span></p>
+                                </div>
+                            </li>
+                            <!-- 개별 사원 정보 카드 end  -->
 
-                                <li class="user-card" name="USR2135">
-                                    <div class="card-top">
-                                        <div class="user-info">
-                                            <p>내근</p>
-                                            <p>노은영</p>
-                                            <p><span>운영혁신담당</span> | <span>POOLINGBiz혁신팀</span></p>
-                                        </div>
-                                        <div class="user-profile">
-                                            <img src="../../../../resources/svgs/profile.jfif"/>
-                                        </div>
+                            <li class="user-card" name="USR2135">
+                                <div class="card-top">
+                                    <div class="user-info">
+                                        <p>내근</p>
+                                        <p>노은영</p>
+                                        <p><span>운영혁신담당</span> | <span>POOLINGBiz혁신팀</span></p>
                                     </div>
-                                    <div class="card-middle">
-                                        <p><span>근무위치  </span><span>본사7층</span></p>
-                                        <p><span>담당업무  </span><span>인트라넷 개발</span></p>
+                                    <div class="user-profile">
+                                        <img src="../../../../resources/svgs/profile.jfif"/>
                                     </div>
-                                    <div class="card-bottom">
-                                        <p><img src="../../../../resources/svgs/sms.svg"/><span>메일쓰기</span></p>
-                                        <p><img src="../../../../resources/svgs/messagecircle.svg"/><span>쪽지쓰기</span></p>
-                                    </div>
-                                </li>
+                                </div>
+                                <div class="card-middle">
+                                    <p><span>근무위치  </span><span>본사7층</span></p>
+                                    <p><span>담당업무  </span><span>인트라넷 개발</span></p>
+                                </div>
+                                <div class="card-bottom">
+                                    <p><img src="../../../../resources/svgs/sms.svg"/><span>메일쓰기</span></p>
+                                    <p><img src="../../../../resources/svgs/messagecircle.svg"/><span>쪽지쓰기</span></p>
+                                </div>
+                            </li>
 
-                                <li class="user-card" name="USR2135">
-                                    <div class="card-top">
-                                        <div class="user-info">
-                                            <p>내근</p>
-                                            <p>도은영</p>
-                                            <p><span>운영혁신담당</span> | <span>POOLINGBiz혁신팀</span></p>
-                                        </div>
-                                        <div class="user-profile">
-                                            <img src="../../../../resources/svgs/profile.jfif"/>
-                                        </div>
+                            <li class="user-card" name="USR2135">
+                                <div class="card-top">
+                                    <div class="user-info">
+                                        <p>내근</p>
+                                        <p>도은영</p>
+                                        <p><span>운영혁신담당</span> | <span>POOLINGBiz혁신팀</span></p>
                                     </div>
-                                    <div class="card-middle">
-                                        <p><span>근무위치  </span><span>본사7층</span></p>
-                                        <p><span>담당업무  </span><span>NPPS, 인트라넷(결제포함), 채용, 온라인연수원</span></p>
+                                    <div class="user-profile">
+                                        <img src="../../../../resources/svgs/profile.jfif"/>
                                     </div>
-                                    <div class="card-bottom">
-                                        <p><img src="../../../../resources/svgs/sms.svg"/><span>메일쓰기</span></p>
-                                        <p><img src="../../../../resources/svgs/messagecircle.svg"/><span>쪽지쓰기</span></p>
-                                    </div>
-                                </li>
+                                </div>
+                                <div class="card-middle">
+                                    <p><span>근무위치  </span><span>본사7층</span></p>
+                                    <p><span>담당업무  </span><span>NPPS, 인트라넷(결제포함), 채용, 온라인연수원</span></p>
+                                </div>
+                                <div class="card-bottom">
+                                    <p><img src="../../../../resources/svgs/sms.svg"/><span>메일쓰기</span></p>
+                                    <p><img src="../../../../resources/svgs/messagecircle.svg"/><span>쪽지쓰기</span></p>
+                                </div>
+                            </li>
 
-                                <li class="user-card" name="USR2135">
-                                    <div class="card-top">
-                                        <div class="user-info">
-                                            <p>내근</p>
-                                            <p>로은영</p>
-                                            <p><span>운영혁신담당</span> | <span>POOLINGBiz혁신팀</span></p>
-                                        </div>
-                                        <div class="user-profile">
-                                            <img src="../../../../resources/svgs/profile.jfif"/>
-                                        </div>
+                            <li class="user-card" name="USR2135">
+                                <div class="card-top">
+                                    <div class="user-info">
+                                        <p>내근</p>
+                                        <p>로은영</p>
+                                        <p><span>운영혁신담당</span> | <span>POOLINGBiz혁신팀</span></p>
                                     </div>
-                                    <div class="card-middle">
-                                        <p><span>근무위치  </span><span>본사7층</span></p>
-                                        <p><span>담당업무  </span><span>TRA 모바일 개발/현장 운영지원</span></p>
+                                    <div class="user-profile">
+                                        <img src="../../../../resources/svgs/profile.jfif"/>
                                     </div>
-                                    <div class="card-bottom">
-                                        <p><img src="../../../../resources/svgs/sms.svg"/><span>메일쓰기</span></p>
-                                        <p><img src="../../../../resources/svgs/messagecircle.svg"/><span>쪽지쓰기</span></p>
-                                    </div>
-                                </li>
+                                </div>
+                                <div class="card-middle">
+                                    <p><span>근무위치  </span><span>본사7층</span></p>
+                                    <p><span>담당업무  </span><span>TRA 모바일 개발/현장 운영지원</span></p>
+                                </div>
+                                <div class="card-bottom">
+                                    <p><img src="../../../../resources/svgs/sms.svg"/><span>메일쓰기</span></p>
+                                    <p><img src="../../../../resources/svgs/messagecircle.svg"/><span>쪽지쓰기</span></p>
+                                </div>
+                            </li>
 
-                                <li class="user-card" name="USR2135">
-                                    <div class="card-top">
-                                        <div class="user-info">
-                                            <p>내근</p>
-                                            <p>모은영</p>
-                                            <p><span>운영혁신담당</span> | <span>POOLINGBiz혁신팀</span></p>
-                                        </div>
-                                        <div class="user-profile">
-                                            <img src="../../../../resources/svgs/profile.jfif"/>
-                                        </div>
+                            <li class="user-card" name="USR2135">
+                                <div class="card-top">
+                                    <div class="user-info">
+                                        <p>내근</p>
+                                        <p>모은영</p>
+                                        <p><span>운영혁신담당</span> | <span>POOLINGBiz혁신팀</span></p>
                                     </div>
-                                    <div class="card-middle">
-                                        <p><span>근무위치  </span><span>본사7층</span></p>
-                                        <!-- <p><span>담당업무  </span><span>유로지스넷 서비스(웹,모바일) UI/GUI ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ디자인</span></p> -->
+                                    <div class="user-profile">
+                                        <img src="../../../../resources/svgs/profile.jfif"/>
                                     </div>
-                                    <div class="card-bottom">
-                                        <p><img src="../../../../resources/svgs/sms.svg"/><span>메일쓰기</span></p>
-                                        <p><img src="../../../../resources/svgs/messagecircle.svg"/><span>쪽지쓰기</span></p>
-                                    </div>
-                                </li>
+                                </div>
+                                <div class="card-middle">
+                                    <p><span>근무위치  </span><span>본사7층</span></p>
+                                </div>
+                                <div class="card-bottom">
+                                    <p><img src="../../../../resources/svgs/sms.svg"/><span>메일쓰기</span></p>
+                                    <p><img src="../../../../resources/svgs/messagecircle.svg"/><span>쪽지쓰기</span></p>
+                                </div>
+                            </li>
 
-                                <li class="user-card" name="USR2135">
-                                    <div class="card-top">
-                                        <div class="user-info">
-                                            <p>내근</p>
-                                            <p>보은영</p>
-                                            <p><span>운영혁신담당</span> | <span>POOLINGBiz혁신팀</span></p>
-                                        </div>
-                                        <div class="user-profile">
-                                            <img src="../../../../resources/svgs/profile.jfif"/>
-                                        </div>
+                            <li class="user-card" name="USR2135">
+                                <div class="card-top">
+                                    <div class="user-info">
+                                        <p>내근</p>
+                                        <p>보은영</p>
+                                        <p><span>운영혁신담당</span> | <span>POOLINGBiz혁신팀</span></p>
                                     </div>
-                                    <div class="card-middle">
-                                        <p><span>근무위치  </span><span>본사7층</span></p>
-                                        <!-- <p><span>담당업무  </span><span>TRA 모바일 개발/현장 운영지원</span></p> -->
+                                    <div class="user-profile">
+                                        <img src="../../../../resources/svgs/profile.jfif"/>
                                     </div>
-                                    <div class="card-bottom">
-                                        <p><img src="../../../../resources/svgs/sms.svg"/><span>메일쓰기</span></p>
-                                        <p><img src="../../../../resources/svgs/messagecircle.svg"/><span>쪽지쓰기</span></p>
-                                    </div>
-                                </li>
+                                </div>
+                                <div class="card-middle">
+                                    <p><span>근무위치  </span><span>본사7층</span></p>
+                                </div>
+                                <div class="card-bottom">
+                                    <p><img src="../../../../resources/svgs/sms.svg"/><span>메일쓰기</span></p>
+                                    <p><img src="../../../../resources/svgs/messagecircle.svg"/><span>쪽지쓰기</span></p>
+                                </div>
+                            </li>
 
-                                <li class="user-card" name="USR2135">
-                                    <div class="card-top">
-                                        <div class="user-info">
-                                            <p>내근</p>
-                                            <p>소은영</p>
-                                            <p><span>운영혁신담당</span> | <span>POOLINGBiz혁신팀</span></p>
-                                        </div>
-                                        <div class="user-profile">
-                                            <img src="../../../../resources/svgs/profile.jfif"/>
-                                        </div>
+                            <li class="user-card" name="USR2135">
+                                <div class="card-top">
+                                    <div class="user-info">
+                                        <p>내근</p>
+                                        <p>소은영</p>
+                                        <p><span>운영혁신담당</span> | <span>POOLINGBiz혁신팀</span></p>
                                     </div>
-                                    <div class="card-middle">
-                                        <p><span>근무위치  </span><span>본사7층</span></p>
-                                        <p><span>담당업무  </span><span>정보전력담당 플랫폼사업</span></p>
+                                    <div class="user-profile">
+                                        <img src="../../../../resources/svgs/profile.jfif"/>
                                     </div>
-                                    <div class="card-bottom">
-                                        <p><img src="../../../../resources/svgs/sms.svg"/><span>메일쓰기</span></p>
-                                        <p><img src="../../../../resources/svgs/messagecircle.svg"/><span>쪽지쓰기</span></p>
-                                    </div>
-                                </li>
+                                </div>
+                                <div class="card-middle">
+                                    <p><span>근무위치  </span><span>본사7층</span></p>
+                                    <p><span>담당업무  </span><span>정보전력담당 플랫폼사업</span></p>
+                                </div>
+                                <div class="card-bottom">
+                                    <p><img src="../../../../resources/svgs/sms.svg"/><span>메일쓰기</span></p>
+                                    <p><img src="../../../../resources/svgs/messagecircle.svg"/><span>쪽지쓰기</span></p>
+                                </div>
+                            </li>
 
-                                <li class="user-card" name="USR2135">
-                                    <div class="card-top">
-                                        <div class="user-info">
-                                            <p>외근</p>
-                                            <p>오은영</p>
-                                            <p><span>운영혁신담당</span> | <span>POOLINGBiz혁신팀</span></p>
-                                        </div>
-                                        <div class="user-profile">
-                                            <img src="../../../../resources/svgs/profile.jfif"/>
-                                        </div>
+                            <li class="user-card" name="USR2135">
+                                <div class="card-top">
+                                    <div class="user-info">
+                                        <p>외근</p>
+                                        <p>오은영</p>
+                                        <p><span>운영혁신담당</span> | <span>POOLINGBiz혁신팀</span></p>
                                     </div>
-                                    <div class="card-middle">
-                                        <p><span>근무위치  </span><span>본사7층</span></p>
-                                        <p><span>담당업무  </span><span>NPPS, 인트라넷(KLP경인,수도권지역본부), 스마트렌스, 스마트풀 문의대응</span></p>
+                                    <div class="user-profile">
+                                        <img src="../../../../resources/svgs/profile.jfif"/>
                                     </div>
-                                    <div class="card-bottom">
-                                        <p><img src="../../../../resources/svgs/sms.svg"/><span>메일쓰기</span></p>
-                                        <p><img src="../../../../resources/svgs/messagecircle.svg"/><span>쪽지쓰기</span></p>
-                                    </div>
-                                </li>
-
-                                <!-- test -->
-
-                                <li class="user-card" name="USR2135">
-                                    <div class="card-top">
-                                        <div class="user-info">
-                                            <p>내근</p>
-                                            <p>고은영</p>
-                                            <p><span>운영혁신담당</span> | <span>POOLINGBiz혁신팀</span></p>
-                                        </div>
-                                        <div class="user-profile">
-                                            <img src="../../../../resources/svgs/profile.jfif"/>
-                                        </div>
-                                    </div>
-                                    <div class="card-middle">
-                                        <p><span>근무위치  </span><span>본사7층</span></p>
-                                        <p><span>담당업무  </span><span>유로지스넷 서비스(웹,모바일) UI/GUI 디자인</span></p>
-                                    </div>
-                                    <div class="card-bottom">
-                                        <p><img src="../../../../resources/svgs/sms.svg"/><span>메일쓰기</span></p>
-                                        <p><img src="../../../../resources/svgs/messagecircle.svg"/><span>쪽지쓰기</span></p>
-                                    </div>
-                                </li>
-
-                                <li class="user-card" name="USR2135">
-                                    <div class="card-top">
-                                        <div class="user-info">
-                                            <p>내근</p>
-                                            <p>노은영</p>
-                                            <p><span>운영혁신담당</span> | <span>POOLINGBiz혁신팀</span></p>
-                                        </div>
-                                        <div class="user-profile">
-                                            <img src="../../../../resources/svgs/profile.jfif"/>
-                                        </div>
-                                    </div>
-                                    <div class="card-middle">
-                                        <p><span>근무위치  </span><span>본사7층</span></p>
-                                        <p><span>담당업무  </span><span>인트라넷 개발</span></p>
-                                    </div>
-                                    <div class="card-bottom">
-                                        <p><img src="../../../../resources/svgs/sms.svg"/><span>메일쓰기</span></p>
-                                        <p><img src="../../../../resources/svgs/messagecircle.svg"/><span>쪽지쓰기</span></p>
-                                    </div>
-                                </li>
-
-                                <li class="user-card" name="USR2135">
-                                    <div class="card-top">
-                                        <div class="user-info">
-                                            <p>내근</p>
-                                            <p>도은영</p>
-                                            <p><span>운영혁신담당</span> | <span>POOLINGBiz혁신팀</span></p>
-                                        </div>
-                                        <div class="user-profile">
-                                            <img src="../../../../resources/svgs/profile.jfif"/>
-                                        </div>
-                                    </div>
-                                    <div class="card-middle">
-                                        <p><span>근무위치  </span><span>본사7층</span></p>
-                                        <p><span>담당업무  </span><span>NPPS, 인트라넷(결제포함), 채용, 온라인연수원</span></p>
-                                    </div>
-                                    <div class="card-bottom">
-                                        <p><img src="../../../../resources/svgs/sms.svg"/><span>메일쓰기</span></p>
-                                        <p><img src="../../../../resources/svgs/messagecircle.svg"/><span>쪽지쓰기</span></p>
-                                    </div>
-                                </li>
-
-                                <li class="user-card" name="USR2135">
-                                    <div class="card-top">
-                                        <div class="user-info">
-                                            <p>내근</p>
-                                            <p>로은영</p>
-                                            <p><span>운영혁신담당</span> | <span>POOLINGBiz혁신팀</span></p>
-                                        </div>
-                                        <div class="user-profile">
-                                            <img src="../../../../resources/svgs/profile.jfif"/>
-                                        </div>
-                                    </div>
-                                    <div class="card-middle">
-                                        <p><span>근무위치  </span><span>본사7층</span></p>
-                                        <p><span>담당업무  </span><span>TRA 모바일 개발/현장 운영지원</span></p>
-                                    </div>
-                                    <div class="card-bottom">
-                                        <p><img src="../../../../resources/svgs/sms.svg"/><span>메일쓰기</span></p>
-                                        <p><img src="../../../../resources/svgs/messagecircle.svg"/><span>쪽지쓰기</span></p>
-                                    </div>
-                                </li>
-
-                                <li class="user-card" name="USR2135">
-                                    <div class="card-top">
-                                        <div class="user-info">
-                                            <p>내근</p>
-                                            <p>모은영</p>
-                                            <p><span>운영혁신담당</span> | <span>POOLINGBiz혁신팀</span></p>
-                                        </div>
-                                        <div class="user-profile">
-                                            <img src="../../../../resources/svgs/profile.jfif"/>
-                                        </div>
-                                    </div>
-                                    <div class="card-middle">
-                                        <p><span>근무위치  </span><span>본사7층</span></p>
-                                        <!-- <p><span>담당업무  </span><span>유로지스넷 서비스(웹,모바일) UI/GUI ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ디자인</span></p> -->
-                                    </div>
-                                    <div class="card-bottom">
-                                        <p><img src="../../../../resources/svgs/sms.svg"/><span>메일쓰기</span></p>
-                                        <p><img src="../../../../resources/svgs/messagecircle.svg"/><span>쪽지쓰기</span></p>
-                                    </div>
-                                </li>
-
-                                <li class="user-card" name="USR2135">
-                                    <div class="card-top">
-                                        <div class="user-info">
-                                            <p>내근</p>
-                                            <p>보은영</p>
-                                            <p><span>운영혁신담당</span> | <span>POOLINGBiz혁신팀</span></p>
-                                        </div>
-                                        <div class="user-profile">
-                                            <img src="../../../../resources/svgs/profile.jfif"/>
-                                        </div>
-                                    </div>
-                                    <div class="card-middle">
-                                        <p><span>근무위치  </span><span>본사7층</span></p>
-                                        <!-- <p><span>담당업무  </span><span>TRA 모바일 개발/현장 운영지원</span></p> -->
-                                    </div>
-                                    <div class="card-bottom">
-                                        <p><img src="../../../../resources/svgs/sms.svg"/><span>메일쓰기</span></p>
-                                        <p><img src="../../../../resources/svgs/messagecircle.svg"/><span>쪽지쓰기</span></p>
-                                    </div>
-                                </li>
-
-                                <li class="user-card" name="USR2135">
-                                    <div class="card-top">
-                                        <div class="user-info">
-                                            <p>내근</p>
-                                            <p>소은영</p>
-                                            <p><span>운영혁신담당</span> | <span>POOLINGBiz혁신팀</span></p>
-                                        </div>
-                                        <div class="user-profile">
-                                            <img src="../../../../resources/svgs/profile.jfif"/>
-                                        </div>
-                                    </div>
-                                    <div class="card-middle">
-                                        <p><span>근무위치  </span><span>본사7층</span></p>
-                                        <p><span>담당업무  </span><span>정보전력담당 플랫폼사업</span></p>
-                                    </div>
-                                    <div class="card-bottom">
-                                        <p><img src="../../../../resources/svgs/sms.svg"/><span>메일쓰기</span></p>
-                                        <p><img src="../../../../resources/svgs/messagecircle.svg"/><span>쪽지쓰기</span></p>
-                                    </div>
-                                </li>
-
-                                <li class="user-card" name="USR2135">
-                                    <div class="card-top">
-                                        <div class="user-info">
-                                            <p>외근</p>
-                                            <p>오은영</p>
-                                            <p><span>운영혁신담당</span> | <span>POOLINGBiz혁신팀</span></p>
-                                        </div>
-                                        <div class="user-profile">
-                                            <img src="../../../../resources/svgs/profile.jfif"/>
-                                        </div>
-                                    </div>
-                                    <div class="card-middle">
-                                        <p><span>근무위치  </span><span>본사7층</span></p>
-                                        <p><span>담당업무  </span><span>NPPS, 인트라넷(KLP경인,수도권지역본부), 스마트렌스, 스마트풀 문의대응</span></p>
-                                    </div>
-                                    <div class="card-bottom">
-                                        <p><img src="../../../../resources/svgs/sms.svg"/><span>메일쓰기</span></p>
-                                        <p><img src="../../../../resources/svgs/messagecircle.svg"/><span>쪽지쓰기</span></p>
-                                    </div>
-                                </li>
-
-                                <!-- test -->
-                            </ul>
-                        </div>
+                                </div>
+                                <div class="card-middle">
+                                    <p><span>근무위치  </span><span>본사7층</span></p>
+                                    <p><span>담당업무  </span><span>NPPS, 인트라넷(KLP경인,수도권지역본부), 스마트렌스, 스마트풀 문의대응</span></p>
+                                </div>
+                                <div class="card-bottom">
+                                    <p><img src="../../../../resources/svgs/sms.svg"/><span>메일쓰기</span></p>
+                                    <p><img src="../../../../resources/svgs/messagecircle.svg"/><span>쪽지쓰기</span></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                     </div>
                 </section>
             </div>
         </main>
     </div>
-   
     <!-- jQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+    <script src="../../../../resources/lib/jquery-migrate-1.4.1.min.js"></script>
     <!-- jsTree -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/jstree.min.js"></script>
-     <script>
-        $(document).ready(function(){
-         
-            let jsoninfo=[];
-            $.getJSON("../../../../resources/db/temp.json",function(data){
-                // json 객체 담기
-                let menu_list=[];
-                let menu_list_info=[];
-                let select_list="";
-                // db 연결하면 데이터 저장할 배열, 현재는 dummy data
-                // json 파일 그대로 사용할 수 있도록 
-    
-                let json=[];
-                
-              
-            let obj = new Object();
-            // let testData = JSON.parse(JSON.stringify(group));
-             data.map(item => {
-                    item.lstItems.map(item2=>{
-                        item2.lstItems.map(item3=>{
-                            item3.lstItems.map(item4=>{
-                                item4.lstItems.map(item5=>{
-                                    if(!item5.ID.includes('USR')) {
-                                        const tmp5 = {text: item5.Header, id: item5.ID , parent: item5.ID,"UP_COM_SYS_SN": item5.UP_COM_SYS_SN , "COM_SYS_SN": item5.COM_SYS_SN};    
-                                        const tmp51 = {text: item5.Header, id: item5.COM_SYS_SN , parent: item5.UP_COM_SYS_SN, key: item5.ID}; 
-                                        json.push(tmp5);
-                                        jsoninfo.push(tmp51);
-                                    }
-                                });
-                                if(!item4.ID.includes('USR')) {
-                                    const tmp4 = {text: item4.Header, id: item4.ID , parent: item3.ID, "UP_COM_SYS_SN": item4.UP_COM_SYS_SN , "COM_SYS_SN": item4.COM_SYS_SN};
-                                    const tmp41 = {text: item4.Header, id: item4.COM_SYS_SN , parent: item4.UP_COM_SYS_SN, key: item4.ID};                 
-                                    json.push(tmp4);
-                                    json.push(JSON.parse(JSON.stringify(tmp4)));
-                                    jsoninfo.push(tmp41);
-                                }
-                            });
-                            if(!item3.ID.includes('USR')) {
-                                const tmp3 = {text: item3.Header, id: item3.ID , parent: item3.ID,"UP_COM_SYS_SN": item3.UP_COM_SYS_SN , "COM_SYS_SN": item3.COM_SYS_SN};
-                                const tmp31 = {text: item3.Header, id: item3.COM_SYS_SN , parent: item3.UP_COM_SYS_SN, key: item3.ID};              
-                                json.push(tmp3);  
-                                jsoninfo.push(tmp31);
-                                
-                            }
-                        })
-                        if(!item2.ID.includes('USR')) {
-                            const tmp2 = {text: item2.Header, id: item2.ID , parent: item2.ID,"UP_COM_SYS_SN": item2.UP_COM_SYS_SN , "COM_SYS_SN": item2.COM_SYS_SN};
-                            const tmp21 = {text: item2.Header, id: item2.COM_SYS_SN , parent: item2.UP_COM_SYS_SN, key: item2.ID}; 
-                            jsoninfo.push(tmp21)
-                        }
-                    })
-                    const tmp = {"text": item.Header, "id": item.COM_SYS_SN , "parent": "#","UP_COM_SYS_SN": item.UP_COM_SYS_SN , "COM_SYS_SN": item.COM_SYS_SN}; 
-                    const tmp1 = {"text": item.Header, "id": item.COM_SYS_SN , "parent": "#", key: item.id}; 
-                    if(!item.ID.includes('USR')) {
-                        jsoninfo.push(tmp1)
-                        // menu_list+="<option id="+item.id+">"+item.Header+"</option>";
-                    }
-                });
-                let temp2 = Object.assign(jsoninfo);
-                $('#jstree').jstree({
-                'core' : {
-                    check_callback: true,
-                    data: temp2,
-                    themes: { dots:false},
-                },
-                'checkbox' : {
-                    "keep_selected_style" : false
-                },
-                'plugins' : ["dnd","types","search","json_data"],
-		        'types' : {
-                    'default' : {
-                        'icon' : 'fa-solid fa-angle-down'
-                    },
-                    'f-open' : {
-                        'icon' : 'fa-solid fa-angle-up'
-                    },
-                    'f-close' : {
-                        'icon' : 'fa-solid fa-angle-down'
-                    }
-                },
-                'group' : {
-                    'jstree-leaf' : false
-
-                }
-            })
-                // $("#jstree").append(tt);
-                $("#select-options").append(menu_list);
-            });
-            // jstree click yzoo
-        });
-
-        $('#jstree').on('select_node.jstree', function (e, data) {
-                data.instance.toggle_node(data.node);
-            });
-        $('#jstree').jstree('get_selected',true)
-        $(function () { 
-            // $('#jstree').jstree(); 
-            $('#jstree').on("changed.jstree", function (e, data) {
-            });
-            $('button').on('click', function () {
-            $('#jstree').jstree(true).select_node('child_node_1');
-            $('#jstree').jstree('select_node', 'child_node_1');
-            $.jstree.reference('#jstree').select_node('child_node_1');
-            });
-        });
-
-        $(document).ready(function() {
-            
-            $('.nav-list > li').click(function() {
-
-                var temp=$(this).attr('id');
-                var selected=$(temp).find('ol');
-                console.log(selected);
-                // if(temp.hasClass('hide')) {
-                //     $('.nav-list-2nd').removeClass('hide');
-                // }
-                // else {
-                //     $('.nav-list-2nd').addClass('hide');
-                // }
-            })
-            
-        })
-    </script>
-   
+     <script src="../../../../resources/js/user/group/index.js"></script>
 </body>
 </html>

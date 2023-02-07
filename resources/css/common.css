@@ -75,9 +75,10 @@ body {
 }
 .main-wrapper {
     width: calc(100% - 160px);  float: right; padding: 30px;
+    background-color: var(--color-bg);  height: 100vh; overflow-y: scroll;
 }
-.main {
-    
+.main-wrapper::-webkit-scrollbar {
+    width: 0;
 }
 .ph1{
     font-family: var(--font-kr); font-weight: var(--font-bold-weight); font-size: 32px; line-height: 40px; letter-spacing: -0.05em; font-style: normal;
@@ -105,9 +106,7 @@ select:focus {
 ul, li {
     list-style: none; padding: 0%;
 }
-.main-wrapper {
-    background-color: var(--color-bg);
-}
+
 main {
     display: flex;
     box-sizing: border-box; height: calc(100vh - 120px);

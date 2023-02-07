@@ -1,6 +1,6 @@
 nav {
     width: 200px; height: 100vh; background-color: var(--font-color);
-    box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.04);
+    box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.04); 
 }
 .logo {
     padding-bottom: 30px;

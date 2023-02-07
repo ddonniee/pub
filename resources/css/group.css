@@ -43,117 +43,173 @@
     margin-right: 5px; width: 17px;
 }
 /* tree 라이브러리 커스텀 */
- .jstree-default .jstree-icon {
-    /* background-image: url('../../resources/svgs/Icon_arrowdownx16\ \(1\).svg') !important; */
-}
-.jstree-open li[aria-expanded='true'] > i {
-    /* background-image: url('../../resources/svgs/home2.svg') !important; */
-}
-.jstree-default .jstree-node, .jstree-default .jstree-icon {
-    /* background-image: none !important; */
-    background-repeat: no-repeat !important;    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-}
-.jstree-default .jstree-closed>.jstree-ocl {
-    background-position: 4px 3px !important;
+/* jstree 아이콘 커스텀 */
+.group-wrapper .tree-list i.jstree-icon.jstree-ocl {
+    display: none;
 }
 
-.tree-list-bottom > ul > li[aria-level="1"]> a{
-    font-weight: var(--font-mid-weight); font-family: var(--font-kr);
+.group-wrapper .tree-list a.jstree-anchor {
+    width: 100% !important;
+}
+
+.group-wrapper .tree-list i.jstree-icon.jstree-themeicon {
+    display: none;
+}
+
+/* 닫힌 항목 */
+.group-wrapper .tree-list .jstree-closed {
+    position: relative;
+}
+
+.group-wrapper .tree-list .jstree-closed::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 16px;
+    height: 16px;
+    background: url('../svgs/Icon_arrowDown_.svg');
+    transform: translate(0, -50%);
+}
+
+/* 열린 항목 */
+.group-wrapper .tree-list li[aria-expanded="true"] > a {
+    position: relative;
+}
+
+.group-wrapper .tree-list li[aria-expanded="true"] > a::after  {  
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 16px;
+    height: 16px;
+    background: url('../svgs/Icon_arrowUp_.svg');
+    transform: translate(0, -50%);
+}
+
+/* 하위항목 */
+.group-wrapper .tree-list li[aria-level="2"]::after {
+    right: 8px !important; 
+}
+
+.group-wrapper .tree-list li[aria-level="2"] > a::after {
+    right: 8px;
+}
+
+.group-wrapper .tree-list li[aria-level="3"]::after {
+    right: 16px !important; 
+}
+.group-wrapper .tree-list li[aria-level="3"] > a::after {
+    right: 16px;
+}
+
+.group-wrapper .tree-list li[aria-level="4"]::after {
+    right: 24px !important; 
+}
+
+.group-wrapper .tree-list li[aria-level="4"] > a::after {
+    right: 24px;
+}
+
+.group-wrapper .tree-list li[aria-level="5"]::after {
+    right: 32px !important; 
+}
+
+.group-wrapper .tree-list li[aria-level="5"] > a::after {
+    right: 32px;
+}
+
+.group-wrapper .tree-list li.jstree-node:not([aria-level="1"]) {
+    margin-left: 12px;
+}
+
+
+/* jstree  */
+.group-wrapper .tree-list {
+    height: 100%;
+    max-height: 1000px;
+}
+.group-wrapper .tree-list .jstree-default .jstree-clicked {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.group-wrapper .tree-list div.tree-list-bottom {
+    padding-top: 15px;
+}
+
+.group-wrapper .tree-list ul.jstree-container-ul.jstree-children.jstree-no-dots > li {
+    font-weight: 500;
     font-size: 14px;
     line-height: 26px;
-    position: relative;
-    /* left: -40px; */
-     color: var(--color-grey-100);line-height: 26px;
-    letter-spacing: -0.05em; 
+    letter-spacing: -0.05em;
+    color: #777777;
 }
-.jstree-children > li {
-    padding: 2px 0px;
+
+.group-wrapper .tree-list ul.jstree-container-ul.jstree-children.jstree-no-dots > li + li {
+    margin-top: 12px;
 }
-.jstree .jstree-open >.jstree-children {
-    position: relative;
-    left: 43px; top: 12px; font-weight: var(--font-mid-weidht);
-}
-.jstree .jstree-open >.jstree-children > li { 
-     margin: 0;     padding-top: 4px;   
-}
-.jstree-open > ul  {
-    padding-bottom: 24px;
-    border-bottom: 1px solid var(--color-grey-20);
-}
-.jstree-1 > ul {
-    position: relative;
-    left: -36px;
-}
-.jstree .jstree-open >.jstree-children > li[aria-level="2"] > a {
-    position: relative; left: -33px; font-family: 'Noto Sans KR';
-    font-style: normal;
-    font-weight: 500; transform:rotate(-0.03deg);
+
+.group-wrapper .tree-list ul.jstree-container-ul.jstree-children.jstree-no-dots > li[aria-expanded="true"] > a{
+    font-weight: 700;
     font-size: 14px;
-}
-.jstree .jstree-open >.jstree-children > li[aria-level="2"] > i{
-    position: relative;
-    left: 199px;
-}
-.jstree .jstree-open >.jstree-children > li[aria-level="2"],[aria-expanded="true"]{
-    /* position: relative; left: -89px; */ 
-    display: block; 
+    line-height: 26px;
+    letter-spacing: -0.05em;
+    color: #1D203A;
 }
 
-.jstree .jstree-open >.jstree-children > li[aria-level="2"] > ul{
-    /* display: flex; */
-    left: -20px;
-    top: 0px;
-    /* flex-direction: row-reverse; */
-    position: relative;
-    
+.group-wrapper .tree-list ul.jstree-container-ul.jstree-children.jstree-no-dots li[aria-level="2"] {
+    margin-top: 12px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.05em;
+    color: #555555;
 }
-.jstree-default .jstree-clicked {
-    background: transparent !important; border: none !important; box-shadow: none !important;
+
+.group-wrapper .tree-list ul.jstree-container-ul.jstree-children.jstree-no-dots li[aria-level="3"] {
+    margin-top: 12px;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 19px;
+    letter-spacing: -0.05em;
+    /* color: #777777; */
 }
-.jstree .jstree-open >.jstree-children > li[aria-level="3"] {
-    display: block;
-}
-.jstree .jstree-open >.jstree-children > li[aria-level="3"] > i {
-    position: relative; right: -198px;
-}
-.jstree .jstree-open >.jstree-children > li[aria-level="3"] > a {
-    font-weight: var(--font-mid-weidht); font-size: 13px; transform:rotate(-0.03deg);
-}
-.jstree .jstree-open >.jstree-children > li[aria-level="3"] > a i{
-    position: relative;
-    left: 173px;
-}
-.jstree .jstree-open >.jstree-children > li[aria-level="3"] > ul{
-    position: relative;
-    left: 33px; top: 2px;
-    font-weight: var(--font-mid-weidht);
+
+.group-wrapper .tree-list ul.jstree-container-ul.jstree-children.jstree-no-dots li[aria-level="4"] {
+    margin-top: 8px;
+    font-weight: 500;
     font-size: 12px;
-    line-height: 17px; 
-    letter-spacing: -0.05em; color: #777777;
+    line-height: 17px;
+    letter-spacing: -0.05em;
+    color: #777777;
 }
 
-.jstree .jstree-open >.jstree-children > li[aria-level="3"] > ul > i {
-    position: relative;
-    left: -41px;
+.group-wrapper .tree-list ul.jstree-container-ul.jstree-children.jstree-no-dots li[aria-level="5"] {
+    margin-top: 4px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 17px;
+    letter-spacing: -0.05em;
+    color: #777777;
 }
-.jstree-default>.jstree-container-ul >.jstree-node {
-    min-height: 35px !important;  align-items: center; 
+
+.group-wrapper .tree-list li.jstree-node.jstree-open[aria-level="1"] {
+    padding-bottom: 12px;;
+    border-bottom: 1px solid #E3E3E3;
 }
-.jstree-default>.jstree-container-ul >.jstree-node {
-    display: flex;
-    justify-content: space-between !important;  left: 13px; position: relative;
-    flex-direction: row-reverse !important;    height: fit-content;
-}   
-.jstree-default>.jstree-container-ul >.jstree-node[aria-expanded="true"]{
-    display: block;    left: -10px;     padding-bottom: 33px;
+
+.group-wrapper .tree-list .vertical-line {
+    height: 1px;
+    width: 100%;
+    background: #E3E3E3;
 }
-.jstree-default>.jstree-container-ul >.jstree-node[aria-expanded="true"]:not(:first-child) {
-    padding-top: 10px;
-}
-.jstree-default>.jstree-container-ul > .jstree-open[aria-expanded="true"] > a{
-    font-weight: var(--font-bold-weight); font-size: 14px; left: -53x; top: 6px; transform:rotate(-0.03deg);
+
+.group-wrapper .tree-list a.jstree-hovered {
+    background: none !important;
+    border: none;
 }
 
 /* 사원 정보 부분 */
@@ -165,7 +221,7 @@
     background-color: transparent;
   }
   .group-wrapper .group-user::-webkit-scrollbar-thumb {
-    background-color: white; background-clip: padding-box;  border: 2px solid transparent;
+    width: 3px; height: 101px;  background-color: var(--color-grey-20); background-clip: padding-box;  border: 2px solid transparent;
   } 
 .group-wrapper .group-user .userlist-top {
     display: flex; justify-content: space-between;

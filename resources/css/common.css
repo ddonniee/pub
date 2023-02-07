@@ -74,7 +74,10 @@ body {
     margin: 0; padding: 0; box-sizing: border-box;  background-color: var(--color-bg);
 }
 .main-wrapper {
-    width: calc(100% - 160px);  float: right;
+    width: calc(100% - 160px);  float: right; padding: 30px;
+}
+.main {
+    
 }
 .ph1{
     font-family: var(--font-kr); font-weight: var(--font-bold-weight); font-size: 32px; line-height: 40px; letter-spacing: -0.05em; font-style: normal;
@@ -107,7 +110,7 @@ ul, li {
 }
 main {
     display: flex;
-    box-sizing: border-box; margin: 0 20px; height: calc(100vh - 120px);
+    box-sizing: border-box; height: calc(100vh - 120px);
 }
 
 select{

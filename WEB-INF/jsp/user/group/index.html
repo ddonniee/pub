@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
     <title>LogiWorks</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=1920, initial-scale=1,maximum-scale=1,user-scalable=no">
     <link href="../../../../resources/css/header.css" rel="stylesheet" type="text/css">
     <link href="../../../../resources/css/nav.css" rel="stylesheet" type="text/css">
     <link href="../../../../resources/css/common.css" rel="stylesheet" type="text/css">
@@ -54,7 +54,7 @@
     <div class="main-wrapper">
         <header>
             <div class="header-search">
-                <input type="text" placeholder="검색어를 입력해주세요" />
+                <input type=text placeholder="검색어를 입력해주세요" />
                 <img src="../../../../resources/svgs/Icon_search.svg" alt="search" class="search"/>
             </div>
             <div class="header-middle"></div>
@@ -95,16 +95,17 @@
                 <div class="tree-list">
                     <div class="tree-list-top">
                         <div class="select-aff">
-                            <select id="select-options">
-                                <option value="" disabled selected>계열사 선택</option>
-                            </select>
+                            <ul id="select-options">계열사 선택
+                                <!-- <option value="" disabled selected>계열사 선택</option> -->
+                            </ul>
                             <img src="../../../../resources/svgs/Icon_arrowdown2.svg" />
                         </div>
                         <div class="search">
-                            <input type="text" placeholder="부서 검색"/>
+                            <input type=text placeholder="부서 검색"/>
                             <img src="../../../../resources/svgs/Icon_search.svg" alt="search"/>
                         </div>
                     </div>
+                    <div class="vertical-line"></div>
                     <div class="tree-list-bottom" id="jstree">
                         <ul class="menu-list">
                         </ul>
@@ -114,7 +115,7 @@
                     <div class="group-user" id="COM1477">
                         <div class="userlist-top">
                             <h4 class="ph4">사원정보 <p>13</p>명</h4> 
-                            <div class="search"><input type="text" placeholder="담당자를 검색해주세요"/><img src="../../../../resources/svgs/Icon_search.svg" alt="search"/></div>
+                            <div class="search"><input type=text placeholder="담당자를 검색해주세요"/><img src="../../../../resources/svgs/Icon_search.svg" alt="search"/></div>
                         </div>
                         <div class="userlist-bottom">
                             <ul>
@@ -143,7 +144,7 @@
                                     <div class="card-top">
                                         <div class="user-info">
                                             <p>내근</p>
-                                            <p>고은영</p>
+                                            <p>노은영</p>
                                             <p><span>운영혁신담당</span> | <span>POOLINGBiz혁신팀</span></p>
                                         </div>
                                         <div class="user-profile">
@@ -164,7 +165,7 @@
                                     <div class="card-top">
                                         <div class="user-info">
                                             <p>내근</p>
-                                            <p>고은영</p>
+                                            <p>도은영</p>
                                             <p><span>운영혁신담당</span> | <span>POOLINGBiz혁신팀</span></p>
                                         </div>
                                         <div class="user-profile">
@@ -185,7 +186,7 @@
                                     <div class="card-top">
                                         <div class="user-info">
                                             <p>내근</p>
-                                            <p>고은영</p>
+                                            <p>로은영</p>
                                             <p><span>운영혁신담당</span> | <span>POOLINGBiz혁신팀</span></p>
                                         </div>
                                         <div class="user-profile">
@@ -206,7 +207,7 @@
                                     <div class="card-top">
                                         <div class="user-info">
                                             <p>내근</p>
-                                            <p>고은영</p>
+                                            <p>모은영</p>
                                             <p><span>운영혁신담당</span> | <span>POOLINGBiz혁신팀</span></p>
                                         </div>
                                         <div class="user-profile">
@@ -227,7 +228,7 @@
                                     <div class="card-top">
                                         <div class="user-info">
                                             <p>내근</p>
-                                            <p>고은영</p>
+                                            <p>보은영</p>
                                             <p><span>운영혁신담당</span> | <span>POOLINGBiz혁신팀</span></p>
                                         </div>
                                         <div class="user-profile">
@@ -248,7 +249,7 @@
                                     <div class="card-top">
                                         <div class="user-info">
                                             <p>내근</p>
-                                            <p>고은영</p>
+                                            <p>소은영</p>
                                             <p><span>운영혁신담당</span> | <span>POOLINGBiz혁신팀</span></p>
                                         </div>
                                         <div class="user-profile">
@@ -269,7 +270,7 @@
                                     <div class="card-top">
                                         <div class="user-info">
                                             <p>외근</p>
-                                            <p>고은영</p>
+                                            <p>오은영</p>
                                             <p><span>운영혁신담당</span> | <span>POOLINGBiz혁신팀</span></p>
                                         </div>
                                         <div class="user-profile">
@@ -286,6 +287,177 @@
                                     </div>
                                 </li>
 
+                                <!-- test -->
+
+                                <li class="user-card" name="USR2135">
+                                    <div class="card-top">
+                                        <div class="user-info">
+                                            <p>내근</p>
+                                            <p>고은영</p>
+                                            <p><span>운영혁신담당</span> | <span>POOLINGBiz혁신팀</span></p>
+                                        </div>
+                                        <div class="user-profile">
+                                            <img src="../../../../resources/svgs/profile.jfif"/>
+                                        </div>
+                                    </div>
+                                    <div class="card-middle">
+                                        <p><span>근무위치  </span><span>본사7층</span></p>
+                                        <p><span>담당업무  </span><span>유로지스넷 서비스(웹,모바일) UI/GUI 디자인</span></p>
+                                    </div>
+                                    <div class="card-bottom">
+                                        <p><img src="../../../../resources/svgs/sms.svg"/><span>메일쓰기</span></p>
+                                        <p><img src="../../../../resources/svgs/messagecircle.svg"/><span>쪽지쓰기</span></p>
+                                    </div>
+                                </li>
+
+                                <li class="user-card" name="USR2135">
+                                    <div class="card-top">
+                                        <div class="user-info">
+                                            <p>내근</p>
+                                            <p>노은영</p>
+                                            <p><span>운영혁신담당</span> | <span>POOLINGBiz혁신팀</span></p>
+                                        </div>
+                                        <div class="user-profile">
+                                            <img src="../../../../resources/svgs/profile.jfif"/>
+                                        </div>
+                                    </div>
+                                    <div class="card-middle">
+                                        <p><span>근무위치  </span><span>본사7층</span></p>
+                                        <p><span>담당업무  </span><span>인트라넷 개발</span></p>
+                                    </div>
+                                    <div class="card-bottom">
+                                        <p><img src="../../../../resources/svgs/sms.svg"/><span>메일쓰기</span></p>
+                                        <p><img src="../../../../resources/svgs/messagecircle.svg"/><span>쪽지쓰기</span></p>
+                                    </div>
+                                </li>
+
+                                <li class="user-card" name="USR2135">
+                                    <div class="card-top">
+                                        <div class="user-info">
+                                            <p>내근</p>
+                                            <p>도은영</p>
+                                            <p><span>운영혁신담당</span> | <span>POOLINGBiz혁신팀</span></p>
+                                        </div>
+                                        <div class="user-profile">
+                                            <img src="../../../../resources/svgs/profile.jfif"/>
+                                        </div>
+                                    </div>
+                                    <div class="card-middle">
+                                        <p><span>근무위치  </span><span>본사7층</span></p>
+                                        <p><span>담당업무  </span><span>NPPS, 인트라넷(결제포함), 채용, 온라인연수원</span></p>
+                                    </div>
+                                    <div class="card-bottom">
+                                        <p><img src="../../../../resources/svgs/sms.svg"/><span>메일쓰기</span></p>
+                                        <p><img src="../../../../resources/svgs/messagecircle.svg"/><span>쪽지쓰기</span></p>
+                                    </div>
+                                </li>
+
+                                <li class="user-card" name="USR2135">
+                                    <div class="card-top">
+                                        <div class="user-info">
+                                            <p>내근</p>
+                                            <p>로은영</p>
+                                            <p><span>운영혁신담당</span> | <span>POOLINGBiz혁신팀</span></p>
+                                        </div>
+                                        <div class="user-profile">
+                                            <img src="../../../../resources/svgs/profile.jfif"/>
+                                        </div>
+                                    </div>
+                                    <div class="card-middle">
+                                        <p><span>근무위치  </span><span>본사7층</span></p>
+                                        <p><span>담당업무  </span><span>TRA 모바일 개발/현장 운영지원</span></p>
+                                    </div>
+                                    <div class="card-bottom">
+                                        <p><img src="../../../../resources/svgs/sms.svg"/><span>메일쓰기</span></p>
+                                        <p><img src="../../../../resources/svgs/messagecircle.svg"/><span>쪽지쓰기</span></p>
+                                    </div>
+                                </li>
+
+                                <li class="user-card" name="USR2135">
+                                    <div class="card-top">
+                                        <div class="user-info">
+                                            <p>내근</p>
+                                            <p>모은영</p>
+                                            <p><span>운영혁신담당</span> | <span>POOLINGBiz혁신팀</span></p>
+                                        </div>
+                                        <div class="user-profile">
+                                            <img src="../../../../resources/svgs/profile.jfif"/>
+                                        </div>
+                                    </div>
+                                    <div class="card-middle">
+                                        <p><span>근무위치  </span><span>본사7층</span></p>
+                                        <!-- <p><span>담당업무  </span><span>유로지스넷 서비스(웹,모바일) UI/GUI ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ디자인</span></p> -->
+                                    </div>
+                                    <div class="card-bottom">
+                                        <p><img src="../../../../resources/svgs/sms.svg"/><span>메일쓰기</span></p>
+                                        <p><img src="../../../../resources/svgs/messagecircle.svg"/><span>쪽지쓰기</span></p>
+                                    </div>
+                                </li>
+
+                                <li class="user-card" name="USR2135">
+                                    <div class="card-top">
+                                        <div class="user-info">
+                                            <p>내근</p>
+                                            <p>보은영</p>
+                                            <p><span>운영혁신담당</span> | <span>POOLINGBiz혁신팀</span></p>
+                                        </div>
+                                        <div class="user-profile">
+                                            <img src="../../../../resources/svgs/profile.jfif"/>
+                                        </div>
+                                    </div>
+                                    <div class="card-middle">
+                                        <p><span>근무위치  </span><span>본사7층</span></p>
+                                        <!-- <p><span>담당업무  </span><span>TRA 모바일 개발/현장 운영지원</span></p> -->
+                                    </div>
+                                    <div class="card-bottom">
+                                        <p><img src="../../../../resources/svgs/sms.svg"/><span>메일쓰기</span></p>
+                                        <p><img src="../../../../resources/svgs/messagecircle.svg"/><span>쪽지쓰기</span></p>
+                                    </div>
+                                </li>
+
+                                <li class="user-card" name="USR2135">
+                                    <div class="card-top">
+                                        <div class="user-info">
+                                            <p>내근</p>
+                                            <p>소은영</p>
+                                            <p><span>운영혁신담당</span> | <span>POOLINGBiz혁신팀</span></p>
+                                        </div>
+                                        <div class="user-profile">
+                                            <img src="../../../../resources/svgs/profile.jfif"/>
+                                        </div>
+                                    </div>
+                                    <div class="card-middle">
+                                        <p><span>근무위치  </span><span>본사7층</span></p>
+                                        <p><span>담당업무  </span><span>정보전력담당 플랫폼사업</span></p>
+                                    </div>
+                                    <div class="card-bottom">
+                                        <p><img src="../../../../resources/svgs/sms.svg"/><span>메일쓰기</span></p>
+                                        <p><img src="../../../../resources/svgs/messagecircle.svg"/><span>쪽지쓰기</span></p>
+                                    </div>
+                                </li>
+
+                                <li class="user-card" name="USR2135">
+                                    <div class="card-top">
+                                        <div class="user-info">
+                                            <p>외근</p>
+                                            <p>오은영</p>
+                                            <p><span>운영혁신담당</span> | <span>POOLINGBiz혁신팀</span></p>
+                                        </div>
+                                        <div class="user-profile">
+                                            <img src="../../../../resources/svgs/profile.jfif"/>
+                                        </div>
+                                    </div>
+                                    <div class="card-middle">
+                                        <p><span>근무위치  </span><span>본사7층</span></p>
+                                        <p><span>담당업무  </span><span>NPPS, 인트라넷(KLP경인,수도권지역본부), 스마트렌스, 스마트풀 문의대응</span></p>
+                                    </div>
+                                    <div class="card-bottom">
+                                        <p><img src="../../../../resources/svgs/sms.svg"/><span>메일쓰기</span></p>
+                                        <p><img src="../../../../resources/svgs/messagecircle.svg"/><span>쪽지쓰기</span></p>
+                                    </div>
+                                </li>
+
+                                <!-- test -->
                             </ul>
                         </div>
                     </div>
@@ -298,170 +470,75 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
     <!-- jsTree -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/jstree.min.js"></script>
-     <script >
+     <script>
         $(document).ready(function(){
          
-            $.getJSON("../../../../resources/db/group.json",function(data){
+            let jsoninfo=[];
+            $.getJSON("../../../../resources/db/temp.json",function(data){
                 // json 객체 담기
                 let menu_list=[];
                 let menu_list_info=[];
                 let select_list="";
                 // db 연결하면 데이터 저장할 배열, 현재는 dummy data
                 // json 파일 그대로 사용할 수 있도록 
-                let json = [
-                        {"text": '로지스올(주)', "id": 'COM628', "parent": '#'},
-                        {"text": '로지스올시스템즈', "id": 'COM254', "parent": '#'},
-                        {"text": '로지스올엔지니어링', "id": 'COM1320', "parent": '#'},
-                        {"text": '로지스올컨설팅', "id": 'COM694', "parent": '#'},
-                        {"text": '마타컴퍼니', "id": 'COM1195', "parent": '#'},
-                        {"text": '물류와환경연구소', "id": 'COM1106', "parent": '#'},
-                        {"text": '사외', "id": 'COM116', "parent": '#'},
-                        {"text": '에코로지스', "id": 'COM1137', "parent": '#'},
-                        {"text": '이노로지스', "id": 'COM477', "parent": '#'},
-                        {"text": '청도고덕리물류기재유한공사', "id": 'COM1249', "parent": '#'},
-                        {"text": '풀앳홈', "id": 'COM914', "parent": '#'},
-                        {"text": '한국로지스풀', "id": 'COM45', "parent": '#'},
-                        {"text": '한국물류연구원', "id": 'COM1119', "parent": '#'},
-                        {"text": '한국지트로지스', "id": 'COM1138', "parent": '#'},
-                        {"text": '한국컨테이너풀', "id": 'COM36', "parent": '#'},
-                        {"text": '한국파렛트풀', "id": 'COM149', "parent": '#'},
-                        {"text": '한국풀네트웍', "id": 'COM285', "parent": '#'},
-                        {"text": '한국풀운영', "id": 'COM800', "parent": '#'},
-                        {"text": 'LogisALLGoldlineVina', "id": 'COM1338', "parent": '#'}, 
-                        {"text": '글로벌사업개발팀', "id": 'COM926', "parent": 'COM628'},
-                        {"text": '글로벌사업부문', "id": 'COM701', "parent": 'COM628'},
-                        {"text": 'ESG경영기획실', "id": 'COM629', "parent": 'COM628'},
-                        {"text": 'SCM본부', "id": 'COM1077', "parent": 'COM628'},
-                        {"text": '운영혁신담당', "id": 'COM264', "parent": 'COM254'},
-                        {"text": '정보전략담당', "id": 'COM927', "parent": 'COM254'},
-                        {"text": '경영지원부(IY)', "id": 'COM1324', "parent": 'COM1320'},
-                        {"text": '기술영업본부(IY)', "id": 'COM1321', "parent": 'COM1320'},
-                        {"text": '생산지원본부(IY)', "id": 'COM1323', "parent": 'COM1320'},
-                        {"text": '엔지니어링전략본부(IY)', "id": 'COM1322', "parent": 'COM1320'},
-                        {"text": '엔지니어링본부', "id": 'COM979', "parent": 'COM694'},
-                        {"text": '컨설팅본부', "id": 'COM982', "parent": 'COM694'},
-                        {"text": '경영관리부(LNE)', "id": 'COM1110', "parent": 'COM1106'},
-                        {"text": '기술부(LNE)', "id": 'COM1108', "parent": 'COM1106'},
-                        {"text": '생산부(LNE)', "id": 'COM1111', "parent": 'COM1106'},
-                        {"text": '영업부(LNE)', "id": 'COM1107', "parent": 'COM1106'},
-                        {"text": 'KPO', "id": 'COM588', "parent": 'COM116'},
-                        {"text": 'HAC운영팀', "id": 'COM478', "parent": 'COM477'},
-                        {"text": '운영팀', "id": 'COM915', "parent": 'COM914'},
-                        {"text": '경영지원본부(KLP)', "id": 'COM1055', "parent": 'COM45'},
-                        {"text": '경인지역본부', "id": 'COM488', "parent": 'COM45'},
-                        {"text": '공동물류본부', "id": 'COM1065', "parent": 'COM45'},
-                        {"text": '네트워크운영팀', "id": 'COM1375', "parent": 'COM45'},
-                        {"text": '동남지역본부', "id": 'COM582', "parent": 'COM45'},
-                        {"text": '물류인프라팀', "id": 'COM1376', "parent": 'COM45'},
-                        {"text": '서남지역본부', "id": 'COM1339', "parent": 'COM45'},
-                        {"text": '수도권지역본부', "id": 'COM1364', "parent": 'COM45'},
-                        {"text": '운영본부', "id": 'COM1441', "parent": 'COM45'},
-                        {"text": '포워딩팀', "id": 'COM1139', "parent": 'COM45'},
-                        {"text": 'KAM본부', "id": 'COM909', "parent": 'COM45'},
-                        {"text": 'MHE본부', "id": 'COM938', "parent": 'COM45'},
-                        {"text": 'SC솔루션본부', "id": 'COM723', "parent": 'COM45'},
-                        {"text": '경영지원본부(KCP)', "id": 'COM1053', "parent": 'COM36'},
-                        {"text": '소비재마케팅본부', "id": 'COM1313', "parent": 'COM36'},
-                        {"text": '시스템지원본부', "id": 'COM1431', "parent": 'COM36'},
-                        {"text": '유통SC본부', "id": 'COM989', "parent": 'COM36'},
-                        {"text": 'SMART산업본부', "id": 'COM988', "parent": 'COM36'},
-                        {"text": 'VC물류사업본부', "id": 'COM990', "parent": 'COM36'},
-                        {"text": '경영지원본부(KPP)', "id": 'COM332', "parent": 'COM149'},
-                        {"text": '글로벌마케팅팀', "id": 'COM1286', "parent": 'COM149'},
-                        {"text": '농산본부', "id": 'COM1296', "parent": 'COM149'},
-                        {"text": '비서실', "id": 'COM204', "parent": 'COM149'},
-                        {"text": '산업재본부', "id": 'COM1293', "parent": 'COM149'},
-                        {"text": '소비재유통본부', "id": 'COM1294', "parent": 'COM149'},
-                        {"text": '소재본부', "id": 'COM1295', "parent": 'COM149'},
-                        {"text": '식품본부', "id": 'COM1292', "parent": 'COM149'},
-                        {"text": 'CS팀', "id": 'COM1289', "parent": 'COM149'},
-                        {"text": 'LogisALL기술연구소', "id": 'COM605', "parent": 'COM149'},
-                        {"text": '영업부(KPN)', "id": 'COM286', "parent": 'COM285'},
-                        {"text": '경영지원팀(소방안전)', "id": 'COM1120', "parent": 'COM800'},
-                        {"text": '경영지원팀(KPO)', "id": 'COM802', "parent": 'COM800'},
-                        {"text": '산업안전보건팀', "id": 'COM1428', "parent": 'COM800'},
-                        {"text": '시스템운영팀(KPO)', "id": 'COM1426', "parent": 'COM800'},
-                        {"text": '운영1본부', "id": 'COM801', "parent": 'COM800'},
-                        {"text": '운영2본부', "id": 'COM1024', "parent": 'COM800'},
-                        {"text": '운영지원팀', "id": 'COM804', "parent": 'COM800'},
-                        {"text": '개발1파트', "id": 'COM1076', "parent": 'COM926', },
-                        {"text": '개발2파트', "id": 'COM1378', "parent": 'COM926',},
-                        {"text": '글로벌사업본부', "id": 'COM1074', "parent": 'COM701', },
-                        {"text": '중국사업본부', "id": 'COM1073', "parent": 'COM701', },
-                        {"text": '경영전략팀', "id": 'COM630', "parent": 'COM629', },
-                        {"text": '인재개발팀', "id": 'COM631', "parent": 'COM629', },
-                        {"text": '커뮤니케이션팀', "id": 'COM964', "parent": 'COM629', },
-                        {"text": '컴플라이언스팀', "id": 'COM722', "parent": 'COM629', },
-                        {"text": '자원순환팀', "id": 'COM1201', "parent": 'COM1077', },
-                        {"text": '체인플러스팀', "id": 'COM1078', "parent": 'COM1077', },
-                        {"text": '통합구매팀', "id": 'COM1079', "parent": 'COM1077', },
-                        {"text": '경영시스템혁신팀', "id": 'COM758', "parent": 'COM264', },
-                        {"text": '네트웍보안팀', "id": 'COM760', "parent": 'COM264', },
-                        {"text": 'POOLINGBiz혁신팀', "id": 'COM759', "parent": 'COM264',},
-                        {"text": '플랫폼사업팀', "id": 'COM929', "parent": 'COM927', },
-                        {"text": 'DT혁신팀', "id": 'COM1316', "parent": 'COM927'},
-                        {"text": 'IoT사업팀', "id": 'COM1057', "parent": 'COM927', },
-                        {"text": 'WnD팀', "id": 'COM928', "parent": 'COM927', },
-                        {"text": '재무팀(IY)', "id": 'COM1336', "parent": 'COM1324', },
-                        {"text": '회계팀(IY)', "id": 'COM1389', "parent": 'COM1324', },
-                        {"text": '신규사업팀', "id": 'COM1390', "parent": 'COM1321', },
-                        {"text": '영업1팀(IY)', "id": 'COM1325', "parent": 'COM1321'},
-                        {"text": '영업2팀(IY)', "id": 'COM1326', "parent": 'COM1321', },
-                        {"text": '영업3팀(IY)', "id": 'COM1359', "parent": 'COM1321', },
-                        {"text": '공사(PM)팀', "id": 'COM1332', "parent": 'COM1323', },
-                        {"text": '물류설비팀', "id": 'COM1386', "parent": 'COM1323', },
-                        {"text": '생산관리1팀', "id": 'COM1331', "parent": 'COM1323', },
-                        {"text": '생산관리2팀', "id": 'COM1385', "parent": 'COM1323', },
-                        {"text": '생산조달팀', "id": 'COM1387', "parent": 'COM1323', },
-                        {"text": '시설안전팀', "id": 'COM1388', "parent": 'COM1323', },
-                        {"text": '제어팀', "id": 'COM1333', "parent": 'COM1323', },
-                        {"text": '품질관리팀', "id": 'COM1334', "parent": 'COM1323', },
-                        {"text": '설계기술1팀', "id": 'COM1328', "parent": 'COM1322', },
-                        {"text": '설계기술2팀', "id": 'COM1329', "parent": 'COM1322', },
-                        {"text": 'SCENG팀', "id": 'COM1384', "parent": 'COM1322', },
-                        {"text": 'SFENG1팀', "id": 'COM1330', "parent": 'COM1322', },
-                        {"text": 'SFENG2팀', "id": 'COM1383', "parent": 'COM1322', },
-                        {"text": '엔지니어링솔루션그룹', "id": 'COM981', "parent": 'COM979'},
-                        {"text": 'DX엔지니어링그룹', "id": 'COM1147', "parent": 'COM979'},
-                        {"text": '물류혁신컨설팅그룹', "id": 'COM983', "parent": 'COM982', },
-                        {"text": 'SCM컨설팅그룹', "id": 'COM984', "parent": 'COM982', },
-                        {"text": 'AS운영팀(LNE)', "id": 'COM1148', "parent": 'COM1110', },
-                        {"text": '해외사업팀', "id": 'COM1075', "parent": 'COM1074'},
-                        {"text": 'LogisALL_Brazil', "id": 'COM1104', "parent": 'COM1074'},
-                        {"text": 'LogisALL_Europe', "id": 'COM1093', "parent": 'COM1074'},
-                        {"text": 'LogisALL_Global_Indonesia', "id": 'COM1092', "parent": 'COM1074'},
-                        {"text": 'LogisaLL_Global_Japan', "id": 'COM1103', "parent": 'COM1074'},
-                        {"text": 'LogisALL_India', "id": 'COM1094', "parent": 'COM1074'},
-                        {"text": 'LogisALL_Japan', "id": 'COM1102', "parent": 'COM1074'},
-                        {"text": 'LogisALL_Mexico', "id": 'COM1089', "parent": 'COM1074'},
-                        {"text": 'LogisALL_Singapore', "id": 'COM1362', "parent": 'COM1074'},
-                        {"text": 'LogisALL_Thailand', "id": 'COM1100', "parent": 'COM1074'},
-                        {"text": 'LogisALL_USA', "id": 'COM1087', "parent": 'COM1074'},
-                        {"text": 'LogisALL_Vietnam', "id": 'COM1090', "parent": 'COM1074'},
-                        {"text": 'LogisALL_China', "id": 'COM1084', "parent": 'COM1074'},
-                        {"text": 'LogisALL_Shanghai', "id": 'COM1085', "parent": 'COM1074'},
-                        {"text": 'Sinotrans_LogisALL_Logistics', "id": 'COM1086', "parent": 'COM1074'},
-                        {"text": 'HR파트', "id": 'COM1198', "parent": 'COM631'},
-                        {"text": 'RM1파트', "id": 'COM1199', "parent": 'COM722'},
-                        {"text": 'RM2파트', "id": 'COM1200', "parent": 'COM722'},
-                ]
-                $.each(data,function(key,value){
-                    if(value.CTG==='C') {
-                        menu_list[key]=value.Header+"<img src=\"../../../../resources/svgs/Icon_arrowdownx16 (1).svg\">";
-                        select_list+="<option id="+value.id+">"+value.Header+"</option>";
-                        menu_list_info[key]=({'text' : value.Header,'id':value.ID, 'parent':'COM'+value.UP_COM_SYS_SN,'items':value.Items} );
+    
+                let json=[];
+                
+              
+            let obj = new Object();
+            // let testData = JSON.parse(JSON.stringify(group));
+             data.map(item => {
+                    item.lstItems.map(item2=>{
+                        item2.lstItems.map(item3=>{
+                            item3.lstItems.map(item4=>{
+                                item4.lstItems.map(item5=>{
+                                    if(!item5.ID.includes('USR')) {
+                                        const tmp5 = {text: item5.Header, id: item5.ID , parent: item5.ID,"UP_COM_SYS_SN": item5.UP_COM_SYS_SN , "COM_SYS_SN": item5.COM_SYS_SN};    
+                                        const tmp51 = {text: item5.Header, id: item5.COM_SYS_SN , parent: item5.UP_COM_SYS_SN, key: item5.ID}; 
+                                        json.push(tmp5);
+                                        jsoninfo.push(tmp51);
+                                    }
+                                });
+                                if(!item4.ID.includes('USR')) {
+                                    const tmp4 = {text: item4.Header, id: item4.ID , parent: item3.ID, "UP_COM_SYS_SN": item4.UP_COM_SYS_SN , "COM_SYS_SN": item4.COM_SYS_SN};
+                                    const tmp41 = {text: item4.Header, id: item4.COM_SYS_SN , parent: item4.UP_COM_SYS_SN, key: item4.ID};                 
+                                    json.push(tmp4);
+                                    json.push(JSON.parse(JSON.stringify(tmp4)));
+                                    jsoninfo.push(tmp41);
+                                }
+                            });
+                            if(!item3.ID.includes('USR')) {
+                                const tmp3 = {text: item3.Header, id: item3.ID , parent: item3.ID,"UP_COM_SYS_SN": item3.UP_COM_SYS_SN , "COM_SYS_SN": item3.COM_SYS_SN};
+                                const tmp31 = {text: item3.Header, id: item3.COM_SYS_SN , parent: item3.UP_COM_SYS_SN, key: item3.ID};              
+                                json.push(tmp3);  
+                                jsoninfo.push(tmp31);
+                                
+                            }
+                        })
+                        if(!item2.ID.includes('USR')) {
+                            const tmp2 = {text: item2.Header, id: item2.ID , parent: item2.ID,"UP_COM_SYS_SN": item2.UP_COM_SYS_SN , "COM_SYS_SN": item2.COM_SYS_SN};
+                            const tmp21 = {text: item2.Header, id: item2.COM_SYS_SN , parent: item2.UP_COM_SYS_SN, key: item2.ID}; 
+                            jsoninfo.push(tmp21)
+                        }
+                    })
+                    const tmp = {"text": item.Header, "id": item.COM_SYS_SN , "parent": "#","UP_COM_SYS_SN": item.UP_COM_SYS_SN , "COM_SYS_SN": item.COM_SYS_SN}; 
+                    const tmp1 = {"text": item.Header, "id": item.COM_SYS_SN , "parent": "#", key: item.id}; 
+                    if(!item.ID.includes('USR')) {
+                        jsoninfo.push(tmp1)
+                        // menu_list+="<option id="+item.id+">"+item.Header+"</option>";
                     }
                 });
+                let temp2 = Object.assign(jsoninfo);
                 $('#jstree').jstree({
                 'core' : {
                     check_callback: true,
-                    data: json,
+                    data: temp2,
                     themes: { dots:false},
                 },
                 'checkbox' : {
                     "keep_selected_style" : false
                 },
-                'plugins' : ["dnd","types","search"],
+                'plugins' : ["dnd","types","search","json_data"],
 		        'types' : {
                     'default' : {
                         'icon' : 'fa-solid fa-angle-down'
@@ -478,23 +555,16 @@
 
                 }
             })
-            .bind("open_node.jstree", function(event, date) {
-                let parentId = event.target;
-                let temp = document.createElement('i');
-                parentId.appendChild(temp)
-                temp.setAttribute('src','../../../../resources/svgs/Icon_arrowdown16.svg')
-                console.log(event,'[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]')
-            })
-                $("#jstree").append(menu_list);
-                $("#select-options").append(select_list);
+                // $("#jstree").append(tt);
+                $("#select-options").append(menu_list);
             });
-            // document.onclick(function(event) {
-            //     console.log(event,'============================')
-            // })
+            // jstree click yzoo
         });
 
-
-
+        $('#jstree').on('select_node.jstree', function (e, data) {
+                data.instance.toggle_node(data.node);
+            });
+        $('#jstree').jstree('get_selected',true)
         $(function () { 
             // $('#jstree').jstree(); 
             $('#jstree').on("changed.jstree", function (e, data) {

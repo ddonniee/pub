@@ -1,6 +1,6 @@
 
 header {
-    margin: 20px;
+    margin-bottom: 40px;
     height: 80px; background-color: var(--font-color); color: var(--color-search); border-radius: 10px;  display: flex !important; text-align: center; align-items: center; justify-content: space-between;
 }
 header .header-search {
